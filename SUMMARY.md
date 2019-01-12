@@ -8,7 +8,7 @@
   * [1.3 摄像机校准](chapter1/section1.3.md)
   * [1.4 梯度](chapter1/section1.4.md)
   * [1.5 颜色空间](chapter1/section1.5.md)
-  * [1.5 颜色空间](chapter1/section1.5.md)
+  * [1.6 高级计算机视觉](chapter1/section1.5.md)
 
 * [第2章 神经网络](chapter2/README.md)
 * [第3章 传感器融合](chapter3/README.md)
