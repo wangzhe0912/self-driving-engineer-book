@@ -6,5 +6,5 @@
   * [1.1 计算机基础](chapter1/section1.1.md)
   * [1.2 实战项目：车道线检测](chapter1/section1.2.md)
   * [Section1.2](chapter1/section1.2.md)
-* [第2章 ](chapter2/README.md)
+* [第2章 神经网络](chapter2/README.md)
 * [Chapter3](chapter3/README.md)
