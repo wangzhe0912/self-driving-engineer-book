@@ -8,3 +8,5 @@
   * [Section1.2](chapter1/section1.2.md)
 * [第2章 神经网络](chapter2/README.md)
 * [第3章 传感器融合](chapter3/README.md)
+* [第4章 定位技术](chapter3/README.md)
+
