@@ -11,6 +11,11 @@
 * [第4章 定位技术](chapter3/README.md)
 * [第5章 路径规划](chapter3/README.md)
 * [第6章 运动控制](chapter3/README.md)
+* [第6章 运动控制](chapter3/README.md)
+
+
+
+
 
 
 
