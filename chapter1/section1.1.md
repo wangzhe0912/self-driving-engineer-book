@@ -192,7 +192,8 @@ plt.imshow(line_image)
 # uncomment if plot does not display
 plt.show()
 ```
-通过上述代码，我们可以得到如果
+通过上述代码，我们可以得到处理后的图像如下：
+
 
 
 
