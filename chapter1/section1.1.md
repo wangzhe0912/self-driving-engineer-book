@@ -15,7 +15,7 @@
 4. 位置
 
 
-## 颜色
+## 颜色基础
 首先，颜色是有助于我们识别车道线的最显著特征。通常，车道线的颜色是白色或黄色的。
 以白色为例，我们应该如何在图像中找出白色的车道线呢？
 对于一副RGB图像而言，分别由三个颜色通道的数据组成。R表示Red，G表示Green，B表示Blue。而一切颜色都构成都是通过调整三个通道各自的值而得到的。
@@ -30,3 +30,45 @@ C. [100,150,200]
 D. [255,255,255]
 
 Yeah！你答对啦~是的，[255,255,255]表示白色~
+
+## 颜色过滤器
+了解了什么是RGB图像，同时也知道了在一副RGB图像中白色的表示。那么，接下来我们将会通过编写一段Python代码来实现简单的颜色过滤。
+Ps：本书中用到的所有代码及附件均可以在[github代码库](https://github.com/wangzhe0912/self-driving-engineer-book)中找到。
+
+在解决这个问题时，我们首先需要引入两个Python的第三方库：numpy与matplotlib。其中，numpy是Python中最常用的数值计算库，适用于矩阵处理等。matplotlib则是Python中最流行的图像可视化库。
+
+关于二者的学习可以参考相关文档：[NumPy](http://www.numpy.org/)，[matplotlib](https://matplotlib.org/)。
+
+```
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import numpy as np
+```
+
+接下来，我将会使用相关的库函数来读取原始图像并打印一些图像的基本信息：
+
+```
+image = mpimg.imread('attachment/rgb_image.jpg')
+print('This image is: ', type(image), 'with dimensions:', image.shape)
+
+# Grab the x and y size and make a copy of the image
+ysize = image.shape[0]
+xsize = image.shape[1]
+# Note: always make a copy rather than simply using "="
+color_select = np.copy(image)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
