@@ -62,7 +62,12 @@ Ps：在Python语言中，我们通常需要使用copy函数而不是=直接进�
 
 接下来，我们需要定义三个变量：red_threshold，green_threshold与blue_threshold，并把三个变量组成一个列表rgb_threshold。这三个阈值分别表示在进行颜色过滤时，我们选择的边界阈值。
 
-
+```python
+red_threshold = 0
+green_threshold = 0
+blue_threshold = 0
+rgb_threshold = [red_threshold, green_threshold, blue_threshold]
+```
 
 
 
