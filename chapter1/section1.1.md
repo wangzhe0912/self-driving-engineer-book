@@ -142,20 +142,8 @@ plt.imshow(region_select)
 plt.show()
 ```
 处理完成后，得到的图像如下：
-![](/assets/7.jpeg)
+![感兴趣区域提取图像](/assets/7.jpeg)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-](/assets/7.jpeg)
