@@ -33,7 +33,7 @@ Yeah！你答对啦~是的，[255,255,255]表示白色~
 
 ## 颜色过滤器
 了解了什么是RGB图像，同时也知道了在一副RGB图像中白色的表示。那么，接下来我们将会通过编写一段Python代码来实现简单的颜色过滤。
-Ps：本书中用到的所有代码及附件均可以在github代码库中找到：
+Ps：本书中用到的所有代码及附件均可以在[github代码库](https://github.com/wangzhe0912/self-driving-engineer-book)中找到。
 
 
 
