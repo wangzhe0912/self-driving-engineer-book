@@ -142,6 +142,7 @@ plt.imshow(region_select)
 plt.show()
 ```
 处理完成后，得到的图像如下：
+![](/assets/7.jpeg)
 
 
 
@@ -157,4 +158,4 @@ plt.show()
 
 
 
-
+](/assets/7.jpeg)
