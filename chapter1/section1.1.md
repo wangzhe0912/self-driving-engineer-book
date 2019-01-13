@@ -129,8 +129,10 @@ fit_bottom = np.polyfit((left_bottom[0], right_bottom[0]), (left_bottom[1], righ
 下面，我们需要依次判断图像中的每个像素点是否属于三角形的三条边的内部：
 ```python
 XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
-region_thresholds = (YY > (XX*fit_left[0] + fit_left[1])) & \
-                    (YY > (XX*fit_right[0] + fit_right[1])) & \
-                    (YY < (XX*fit_bottom[0] + fit_bottom[1]))
+region_thresholds = (YY > (XX*fit_left[0] + fit_left[1])) & (YY > (XX*fit_right[0] + fit_right[1])) & (YY < (XX*fit_bottom[0] + fit_bottom[1]))
 ```
 
+最后，我们可以将所有感兴趣区域设置为红色：
+```python
+
+```
