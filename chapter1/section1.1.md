@@ -46,6 +46,7 @@ import matplotlib.image as mpimg
 import numpy as np
 ```
 
+接下来，我将会使用相关的库函数来读取原始图像并打印一些图像的基本信息：
 
 
 
