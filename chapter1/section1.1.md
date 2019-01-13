@@ -121,6 +121,9 @@ apex = [400, 0]
 
 下面，我们需要通过三角形的三个顶点来计算得到三角形的三条边函数：
 ```python
+fit_left = np.polyfit((left_bottom[0], apex[0]), (left_bottom[1], apex[1]), 1)
+fit_right = np.polyfit((right_bottom[0], apex[0]), (right_bottom[1], apex[1]), 1)
+fit_bottom = np.polyfit((left_bottom[0], right_bottom[0]), (left_bottom[1], right_bottom[1]), 1)
 
 ```
 
