@@ -130,7 +130,6 @@ fit_bottom = np.polyfit((left_bottom[0], right_bottom[0]), (left_bottom[1], righ
 ```python
 XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
 region_thresholds = (YY < (XX*fit_left[0] + fit_left[1])) | (YY < (XX*fit_right[0] + fit_right[1])) | (YY > (XX*fit_bottom[0] + fit_bottom[1]))
-
 ```
 
 最后，我们可以将所有感兴趣区域设置为红色：
