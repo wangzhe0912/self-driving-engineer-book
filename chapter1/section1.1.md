@@ -98,6 +98,9 @@ plt.show()
 
 同样，我们需要先引入相关的库并读取图片信息：
 ```python
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import numpy as np
 
 ```
 
