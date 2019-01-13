@@ -193,7 +193,8 @@ plt.imshow(line_image)
 plt.show()
 ```
 通过上述代码，我们可以得到处理后的图像如下：
-
+![结合感兴趣区域提取与颜色过滤器提取车道线
+](/assets/8.jpeg)
 
 
 
