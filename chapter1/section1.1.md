@@ -60,7 +60,7 @@ color_select = np.copy(image)
 
 Ps：在Python语言中，我们通常需要使用copy函数而不是=直接进行赋值。原因在于copy相当于值传递，修改新的变量不会对原始变量有影响；而直接使用=进行赋值时则相当于引用传递，此时，如果直接修改新的变量，同时也会修改了原始的变量。
 
-接下来，我们需要定义三个变量：red_threshold，green_threshold与blue_threshold，并把三个变量组成一个列表rgb_threshold
+接下来，我们需要定义三个变量：red_threshold，green_threshold与blue_threshold，并把三个变量组成一个列表rgb_threshold。这三个阈值分别表示在进行颜色过滤时，我们选择的边界阈值。
 
 
 
