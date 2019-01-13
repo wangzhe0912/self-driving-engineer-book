@@ -40,7 +40,7 @@ Ps：本书中用到的所有代码及附件均可以在[github代码库](https:
 关于二者的学习可以参考相关文档：[NumPy](http://www.numpy.org/)，[matplotlib](https://matplotlib.org/)。
 
 
-```python
+```
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
