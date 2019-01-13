@@ -175,9 +175,7 @@ fit_right = np.polyfit((right_bottom[0], apex[0]), (right_bottom[1], apex[1]), 1
 fit_bottom = np.polyfit((left_bottom[0], right_bottom[0]), (left_bottom[1], right_bottom[1]), 1)
 
 # Mask pixels below the threshold
-color_thresholds = (image[:,:,0] < rgb_threshold[0]) | \
-                    (image[:,:,1] < rgb_threshold[1]) | \
-                    (image[:,:,2] < rgb_threshold[2])
+color_thresholds = (image[:,:,0] < rgb_threshold[0]) | (image[:,:,1] < rgb_threshold[1]) | (image[:,:,2] < rgb_threshold[2])
 
 # Find the region inside the lines
 XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
@@ -194,7 +192,7 @@ plt.imshow(line_image)
 # uncomment if plot does not display
 plt.show()
 ```
-
+通过上述代码，我们可以得到如果
 
 
 
