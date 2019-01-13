@@ -82,7 +82,7 @@ color_select[thresholds] = [0,0,0]
 plt.imshow(color_select)
 plt.show()
 ```
-
+其中，`color_select`表示处理后的图像
 
 
 
