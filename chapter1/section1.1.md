@@ -37,4 +37,4 @@ Ps：本书中用到的所有代码及附件均可以在[github代码库](https:
 
 在解决这个问题时，我们首先需要引入两个Python的第三方库：numpy与matplotlib。其中，numpy是Python中最常用的数值计算库，适用于矩阵处理等。matplotlib则是Python中最流行的图像可视化库。
 
-
+关于二者的学习可以参考相关文档：
