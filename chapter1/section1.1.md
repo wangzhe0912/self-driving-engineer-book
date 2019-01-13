@@ -48,7 +48,6 @@ import numpy as np
 接下来，我将会使用相关的库函数来读取原始图像并打印一些图像的基本信息：
 
 ```python
-
 image = mpimg.imread('attachment/rgb_image.jpg')
 print('This image is: ', type(image), 'with dimensions:', image.shape)
 
