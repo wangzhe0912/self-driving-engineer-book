@@ -141,7 +141,7 @@ plt.imshow(region_select)
 
 plt.show()
 ```
-处理完成后，得到的结果如下：
+处理完成后，得到的图像如下：
 
 
 
