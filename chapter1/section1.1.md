@@ -82,8 +82,7 @@ color_select[thresholds] = [0,0,0]
 plt.imshow(color_select)
 plt.show()
 ```
-其中，`color_select`表示处理后的图像，其中针对RGB图像均满足阈值要求的点被保留了下来，其余点均被置为了黑色I。
-
+其中，`color_select`表示处理后的图像，其中针对RGB图像均满足阈值要求的点被保留了下来，其余点均被置为了黑色。
 
 
 
