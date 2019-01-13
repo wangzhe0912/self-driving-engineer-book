@@ -193,7 +193,6 @@ plt.imshow(line_image)
 
 # uncomment if plot does not display
 plt.show()
-
 ```
 
 
