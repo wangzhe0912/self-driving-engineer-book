@@ -185,9 +185,7 @@ color_thresholds = (image[:,:,0] < rgb_threshold[0]) | \
 
 # Find the region inside the lines
 XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
-region_thresholds = (YY > (XX*fit_left[0] + fit_left[1])) & \
-                    (YY > (XX*fit_right[0] + fit_right[1])) & \
-                    (YY < (XX*fit_bottom[0] + fit_bottom[1]))
+region_thresholds = (YY > (XX*fit_left[0] + fit_left[1])) & (YY > (XX*fit_right[0] + fit_right[1])) & (YY < (XX*fit_bottom[0] + fit_bottom[1]))
 # Mask color selection
 color_select[color_thresholds] = [0, 0, 0]
 # Find where image is both colored right and in the region
