@@ -58,7 +58,7 @@ xsize = image.shape[1]
 color_select = np.copy(image)
 ```
 
-
+Ps：在Python语言中，我们通常需要使用copy函数而不是=直接进行复制。
 
 
 
