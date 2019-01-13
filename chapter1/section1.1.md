@@ -132,7 +132,7 @@ XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
 region_thresholds = (YY < (XX*fit_left[0] + fit_left[1])) | (YY < (XX*fit_right[0] + fit_right[1])) | (YY > (XX*fit_bottom[0] + fit_bottom[1]))
 ```
 
-最后，我们可以将所有感兴趣区域设置为红色：
+最后，我们可以将所有非感兴趣区域设置为红色：
 ```python
 region_select[region_thresholds] = [0, 0, 0]
 
