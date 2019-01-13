@@ -69,7 +69,7 @@ blue_threshold = 0
 rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 ```
 
-
+下面就是颜色过滤器中最重要的步骤了，我们需要将R、G、B通道中所有不满足阈值限制的点全部置黑。
 
 
 
