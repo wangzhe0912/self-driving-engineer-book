@@ -110,7 +110,6 @@ ysize = image.shape[0]
 xsize = image.shape[1]
 # Note: always make a copy rather than simply using "="
 color_select = np.copy(image)
-
 ```
 
 
