@@ -102,6 +102,15 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
 
+image = mpimg.imread('attachment/rgb_image.jpg')
+print('This image is: ', type(image), 'with dimensions:', image.shape)
+
+# Grab the x and y size and make a copy of the image
+ysize = image.shape[0]
+xsize = image.shape[1]
+# Note: always make a copy rather than simply using "="
+color_select = np.copy(image)
+
 ```
 
 
