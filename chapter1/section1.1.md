@@ -109,7 +109,7 @@ print('This image is: ', type(image), 'with dimensions:', image.shape)
 ysize = image.shape[0]
 xsize = image.shape[1]
 # Note: always make a copy rather than simply using "="
-color_select = np.copy(image)
+region_select = np.copy(image)
 ```
 
 接下来，为了定义第一个三角形的感兴趣区域，我们需要在图像中选择三个点作为三角形的三个顶点：
