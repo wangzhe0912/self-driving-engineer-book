@@ -139,6 +139,5 @@ region_select[region_thresholds] = [255, 0, 0]
 # Display the image
 plt.imshow(region_select)
 
-# uncomment if plot does not display
-# plt.show()
+plt.show()
 ```
