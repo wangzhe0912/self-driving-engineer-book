@@ -134,7 +134,7 @@ region_thresholds = (YY < (XX*fit_left[0] + fit_left[1])) | (YY < (XX*fit_right[
 
 最后，我们可以将所有感兴趣区域设置为红色：
 ```python
-region_select[region_thresholds] = [255, 0, 0]
+region_select[region_thresholds] = [0, 0, 0]
 
 # Display the image
 plt.imshow(region_select)
