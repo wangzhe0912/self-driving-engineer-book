@@ -114,8 +114,8 @@ region_select = np.copy(image)
 
 接下来，为了定义第一个三角形的感兴趣区域，我们需要在图像中选择三个点作为三角形的三个顶点：
 ```python
-left_bottom = [0, 539]
-right_bottom = [900, 300]
+left_bottom = [0, 439]
+right_bottom = [700, 300]
 apex = [400, 0]
 ```
 
