@@ -71,6 +71,17 @@ rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
 下面就是颜色过滤器中最重要的步骤了，我们需要将R、G、B通道中所有不满足阈值限制的点全部置黑，仅保留满足阈值限制点的原始颜色。
 
+```python
+# Identify pixels below the threshold
+thresholds = (image[:,:,0] < rgb_threshold[0]) \
+            | (image[:,:,1] < rgb_threshold[1]) \
+            | (image[:,:,2] < rgb_threshold[2])
+color_select[thresholds] = [0,0,0]
+
+# Display the image                 
+plt.imshow(color_select)
+plt.show()
+```
 
 
 
