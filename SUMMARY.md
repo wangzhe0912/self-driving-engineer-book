@@ -4,6 +4,7 @@
   * [总览全书](chapter0/README.md)
 * [第1章 计算机视觉](chapter1/README.md)
   * [1.1 计算机视觉基础](chapter1/section1.1.md)
+    * [RGB基本概念](chapter1/section1.1.1.md)
   * [1.2 实战项目：车道线检测](chapter1/section1.2.md)
   * [1.3 摄像机校准](chapter1/section1.3.md)
   * [1.4 梯度](chapter1/section1.4.md)
