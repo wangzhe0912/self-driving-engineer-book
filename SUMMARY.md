@@ -8,6 +8,8 @@
     * [颜色过滤器](chapter1/section1.1.2.md)
     * [感兴趣区域提取](chapter1/section1.1.3.md)
     * [结合感兴趣区域提取与颜色过滤器提取车道线](chapter1/section1.1.4.md)
+    * [计算机视觉](chapter1/section1.1.5.md)
+    * [Canny边缘检测](chapter1/section1.1.6.md)
   * [1.2 实战项目：车道线检测](chapter1/section1.2.md)
   * [1.3 摄像机校准](chapter1/section1.3.md)
   * [1.4 梯度](chapter1/section1.4.md)
