@@ -212,7 +212,9 @@ Canny边缘检测的基本原理就是通过计算图像中各个像素点的梯
 
 接下来，我们首先看一下openCV中Canny边缘检测函数的输入参数：
 
-
+```
+edges = cv2.Canny(gray, low_threshold, high_threshold)
+```
 
 
 
