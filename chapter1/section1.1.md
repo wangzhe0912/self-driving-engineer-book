@@ -225,6 +225,12 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 ![二元函数](/assets/9.jpg)
 因此，我们可以对这个图像进行一些数学运算。
 
+例如，我们可以对每个像素点的值进行求导：
+
+$$
+\frac{df}{dx} = \Delta(pixel value)
+$$
+
 
 
 
