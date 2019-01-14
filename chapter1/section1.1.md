@@ -206,7 +206,7 @@ plt.show()
 在本书中，我们将使用python和**opencv**进行计算机视觉相关的工作。**opencv**的全称是Open-Source Computer Vision。它包含了大量可以使用的函数库。OpenCV库本身提供了完整详细的文档，更多内容可以查阅相关的[文档](http://opencv.org/)。
 
 ## Canny边缘检测
-Canny边缘检测算法是John F. Canny于 1986 年开发出来的一个多级边缘检测算法。
+Canny边缘检测算法是John F.Canny于1986年开发出来的一个多级边缘检测算法。
 
 
 
