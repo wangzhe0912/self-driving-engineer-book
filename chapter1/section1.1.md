@@ -228,7 +228,7 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 例如，我们可以对每个像素点的值进行求导：
 
 $$
-\frac{df}{dx} = \Delta(pixel_value)
+\frac{df}{dx} = \Delta(pixel\_value)
 $$
 
 
