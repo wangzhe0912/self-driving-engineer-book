@@ -34,7 +34,7 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 
 那么，`low_threshold`和`high_threshold`应该如何选择呢？由于我们将图像转为了灰度图像，每个像素点的值由8bits组成。因此，`low_threshold`和`high_threshold`的合法输入为[0, 255]。
 
-
+而`threshold`的实际含义表示相邻像素点之间的颜色差异，因此，一个合理的选择应该在几十到一两百之间。
 
 
 
