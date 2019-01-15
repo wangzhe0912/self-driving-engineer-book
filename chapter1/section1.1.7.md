@@ -14,3 +14,15 @@ plt.imshow(image)
 我们加载了一副道路的图像，人眼观察的话我们很容易找到车道线在哪里，但是如何让计算机程序做到这一点呢？
 
 第二步，我们需要将图像转换为灰度图像：
+```python
+import cv2  #bringing in OpenCV libraries
+gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) #grayscale conversion
+plt.imshow(gray, cmap='gray')
+```
+![CannyImage2](/assets/12.jpg)
+
+第三步，Canny边缘检测
+接下来，我们将会将Canny边缘检测算法应用于这副图像中。我们来看一下OpenCV中Canny边缘检测函数：
+```python
+edges = cv2.Canny(gray, low_threshold, high_threshold)
+```
