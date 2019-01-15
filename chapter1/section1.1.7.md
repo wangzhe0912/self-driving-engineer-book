@@ -36,7 +36,7 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 
 而`threshold`的实际含义表示相邻像素点之间的颜色差异，因此，一个合理的选择应该在几十到一两百之间。此外，根据经验来看，`low_threshold`和`high_threshold`之前的大小比例应该在1:2或1:3。
 
-
+除了Canny边缘检测，我们还将介绍一个图像处理算法：**高斯平滑**。高斯平滑本质上是通过求相邻像素点之间的平均值来抑止噪声并避免伪梯度。
 
 
 
