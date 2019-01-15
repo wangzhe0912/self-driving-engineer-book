@@ -65,7 +65,8 @@ edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 plt.imshow(edges, cmap='Greys_r')
 ```
 
-
+处理完成后得到的结果如下：
+![CannyResult](/assets/13.jpg)
 
 
 
