@@ -28,7 +28,7 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 ```
 通过该函数，我们将对输入的灰度图像进行canny边缘检测处理，输出的是应用边缘检测算法后得到的图像`edges`。
 
-在canny边缘检测算法中，首先会找出梯度高于`high_threshold`的像素点，同时过滤掉梯度低于`low_threshold`的像素点。接下里，对于梯度值在`low_threshold`和`high_threshold`之间
+在canny边缘检测算法中，首先会找出梯度高于`high_threshold`的像素点作为高概率边缘，同时过滤掉梯度低于`low_threshold`的像素点。接下里，对于梯度值在`low_threshold`和`high_threshold`之间的像素点，如果该像素点与高概率边缘相邻，则保留该像素点，否则则过滤该像素点。
 
 
 
