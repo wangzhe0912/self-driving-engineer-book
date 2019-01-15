@@ -32,7 +32,7 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 
 对于输出的图像`edges`，其中检测到的边缘将会显示为白色，其余像素点均为黑素。
 
-那么，`low_threshold`和`high_threshold`应该如何选择呢？由于我们将图像转为了灰度图像，每个像素点的值由8bits组成。因此，`low_threshold`和`high_threshold`的合法输入为[0, 255]
+那么，`low_threshold`和`high_threshold`应该如何选择呢？由于我们将图像转为了灰度图像，每个像素点的值由8bits组成。因此，`low_threshold`和`high_threshold`的合法输入为[0, 255]。
 
 
 
