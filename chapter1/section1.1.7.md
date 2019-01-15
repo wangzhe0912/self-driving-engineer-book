@@ -40,7 +40,10 @@ edges = cv2.Canny(gray, low_threshold, high_threshold)
 
 在使用高斯平滑时，我们需要指定高斯平滑的内核大小，内核大小必须为奇数。且内核大小设置越大时，平滑效果越明显。
 
+完整的示例代码如下：
+```python
 
+```
 
 
 
