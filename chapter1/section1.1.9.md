@@ -7,5 +7,6 @@
 
 为了实现霍夫变换，我们将会用到OpenCV中`HoughLinesP`的函数，其调用方式如下：
 ```
-
+lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]),
+                                             min_line_length, max_line_gap)
 ```
