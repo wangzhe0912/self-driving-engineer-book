@@ -12,5 +12,8 @@ lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]), min_l
 1. masked_edges表示的是输入的边缘检测图像（Canny边缘检测的输出结果）。
 2. $$\rho$$和$$\theta$$是我们网格在霍夫空间中的距离和角度分辨率。即在霍夫空间中，我们会沿着（θ，ρ）轴分别的网格。其中以像素为单位指定rho，以弧度为单位指定theta。那么$$\rho$$和$$\theta$$的合理取值是什么呢？通常，我们可以设置$$\rho=1$$，$$\theta$$为1度（pi/180）。当时，这些参数可以根据实际情况进行调整~
 3. threshold是参与选举的最小曲线交点数。
+4. np.array([])仅仅用于占位，我们通常不需要修改。
+5. min_line_length表示我们可以接受的直线最小长度。
+6. max_line_gap则表示允许连接到一条直线的段之间的最大距离
 
 
