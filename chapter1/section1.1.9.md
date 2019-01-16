@@ -6,6 +6,6 @@
 刚才我们已经了解了什么是霍夫变换，我们来看一下如何将霍夫变换用于车道线检测问题。为了完成查找车道线的任务，我们还需要指定一些参数来说明要检测哪种类型的线（即线段的长短、弯曲程度、是否为虚线等）。
 
 为了实现霍夫变换，我们将会用到OpenCV中`HoughLinesP`的函数，其调用方式如下：
-```
+```python
 lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]), min_line_length, max_line_gap)
 ```
