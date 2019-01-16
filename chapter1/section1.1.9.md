@@ -97,4 +97,4 @@ plt.show()
 ```
 
 处理后得到的结果如下：
-
+![output](/assets/24.jpg)
