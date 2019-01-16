@@ -10,6 +10,6 @@ lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]), min_l
 下面，我们来依次分析相关变量的含义：
 
 1. masked_edges表示的是输入的边缘检测图像（Canny边缘检测的输出结果）。
-2. $$\rho$$和$$\theta$$是我们网格在霍夫空间中的距离和角度分辨率。即在霍夫空间中，我们会沿着（θ，ρ）轴布置的网格。您需要以像素为单位指定rho，以弧度为单位指定theta。
+2. $$\rho$$和$$\theta$$是我们网格在霍夫空间中的距离和角度分辨率。即在霍夫空间中，我们会沿着（θ，ρ）轴分别的网格。您需要以像素为单位指定rho，以弧度为单位指定theta。
 
 
