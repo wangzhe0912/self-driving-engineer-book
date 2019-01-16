@@ -15,6 +15,6 @@ lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]), min_l
 4. np.array([])仅仅用于占位，我们通常不需要修改。
 5. min_line_length表示我们可以接受的直线最小长度。
 6. max_line_gap则表示允许将点与直线连接起来的最大距离。
-7. lines表示通过霍夫变换后找到的线段。
+7. lines表示通过霍夫变换后找到的线段列表，其中列表中每个元素都是由(x1,x2,y1,y2)四个坐标点组成的。
 
 
