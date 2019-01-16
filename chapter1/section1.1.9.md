@@ -14,6 +14,6 @@ lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]), min_l
 3. threshold是参与选举的最小曲线交点数。
 4. np.array([])仅仅用于占位，我们通常不需要修改。
 5. min_line_length表示我们可以接受的直线最小长度。
-6. max_line_gap则表示允许连接到一条直线的段之间的最大距离
+6. max_line_gap则表示允许将点与直线连接起来的最大距离
 
 
