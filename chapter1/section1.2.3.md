@@ -8,7 +8,7 @@
 
 接下来，我们可以通过参数调整和算法来优化我们的处理流程并得到更精确的结果。
 
-代码库中有一个名为“p1_example.mp4”的视频文件是给我们的输出样例，以查看最终输出应该是什么样子的示例。提供了两个视频供您在上面运行代码。这些被称为“solidWhiteRight.mp4”和solidYellowLeft.mp4”。
+代码库中有一个名为“p1_example.mp4”的视频文件是给我们的输出样例。提供了两个视频供您在上面运行代码。这些被称为“solidWhiteRight.mp4”和solidYellowLeft.mp4”。
 
 
 
