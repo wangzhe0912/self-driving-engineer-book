@@ -41,7 +41,9 @@ plt.imshow(image)
 import math
 
 def grayscale(img):
-    """Applies the Grayscale transform
+    """
+    灰度变化函数
+    Applies the Grayscale transform
     This will return an image with only one color channel
     but NOTE: to see the returned image as grayscale
     (assuming your grayscaled image is called 'gray')
