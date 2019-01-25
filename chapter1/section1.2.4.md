@@ -12,6 +12,8 @@ Ps：对视频车道线的检测与对图像车道线的检测非常类似，我
 接下来，则会将找出的车道线进行连接，得到如下的图像：
 ![车道线连线](/assets/27.jpg)
 
+下面，我们将在jupyter-notebook中一步步的来实现上述描述的功能。
+
 第一步，引入相关的包：
 ```python
 import matplotlib.pyplot as plt
