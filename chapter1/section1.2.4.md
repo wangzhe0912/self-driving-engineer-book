@@ -22,3 +22,18 @@ import numpy as np
 import cv2
 %matplotlib inline
 ```
+
+第二步：读取原始图像
+```python
+image = mpimg.imread('test_images/solidWhiteRight.jpg')
+
+#printing out some stats and plotting
+print('This image is:', type(image), 'with dimensions:', image.shape)
+plt.imshow(image)
+```
+
+
+
+
+
+
