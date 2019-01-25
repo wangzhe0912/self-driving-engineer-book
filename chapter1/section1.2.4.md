@@ -31,7 +31,7 @@ image = mpimg.imread('test_images/solidWhiteRight.jpg')
 print('This image is:', type(image), 'with dimensions:', image.shape)
 plt.imshow(image)
 ```
-
+![read_img](/assets/28.jpg)
 
 
 
