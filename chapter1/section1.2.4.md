@@ -37,4 +37,6 @@ plt.imshow(image)
 
 第三步：**helper_function**
 接下来，我们将会列举出之前文章中所使用的各个函数，这些函数将有效的帮助我们实现上述功能。
+```python
 
+```
