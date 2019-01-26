@@ -94,6 +94,8 @@ def region_of_interest(img, vertices):
 def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
     """
     用于将检测到的车道线显示到图像中的函数
+    我们可以通过线段的斜率(y1 - y2) / (x1 - x2)
+找出哪些线段属于左侧车道线，哪些线段属于右侧车道线。
     
     """
     left_list = []
