@@ -193,9 +193,6 @@ os.listdir("test_images/")
 
 第五步：利用之前的辅助函数构建车道线的处理流程
 ```python
-# TODO: Build your pipeline that will draw lane lines on the test_images
-# then save them to the test_images_output directory.
-# # import time
 
 ori_image = mpimg.imread('test_images/solidWhiteRight.jpg')
 # Step1: grayscale
