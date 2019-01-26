@@ -207,10 +207,8 @@ plt.imshow(image, cmap='gray')
 image = gaussian_blur(image, 9)
 plt.imshow(image, cmap='gray')
 
-# Step4: region_of_interest
-# vertices = np.array([[0,500], [500,300],[900,500], [0,500]])
+# Step4: 感兴趣区域提取
 imshape = image.shape
-print(imshape)
 vertices = np.array([[(0,imshape[0]),(500, 300), (501, 300), (imshape[1],imshape[0])]], dtype=np.int32)
 image = region_of_interest(image, vertices)
 plt.imshow(image, cmap='gray')
