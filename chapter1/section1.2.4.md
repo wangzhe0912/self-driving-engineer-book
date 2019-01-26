@@ -241,7 +241,38 @@ imageio.plugins.ffmpeg.download()
 ```
 下面，我们先将之前对图像的处理封装为一个函数：
 ```python
+from moviepy.editor import VideoFileClip
+from IPython.display import HTML
+def process_image(image):
+    # NOTE: The output you return should be a color image (3 channel) for processing video below
+    # TODO: put your pipeline here,
+    # you should return the final output (image where lines are drawn on lanes)
+    # Step1: gray_image
+    gray_image = grayscale(image)
+    
+    # Step2: canny
+    canny_image = canny(gray_image, 50, 150)
 
+    # Step3: gaussian blur
+    gaussian_blur_image = gaussian_blur(canny_image, 5)
+
+    # Step4: region_of_interest
+    imshape = gaussian_blur_image.shape
+    vertices = np.array([[(0,imshape[0]),(500, 300), (501, 300), (imshape[1],imshape[0])]], dtype=np.int32)
+    interest_region_image = region_of_interest(gaussian_blur_image, vertices)
+
+    # Step5: hough_lines
+    rho = 2  # distance resolution in pixels of the Hough grid
+    theta = 2 * np.pi/180  # angular resolution in radians of the Hough grid
+    threshold = 80     # minimum number of votes (intersections in Hough grid cell)
+    min_line_len = 40  #minimum number of pixels making up a line
+    max_line_gap = 3    # maximum gap in pixels between connectable line segments
+    # line_image = np.copy(image)*0 
+    lanes_image = hough_lines(interest_region_image, rho, theta, threshold, min_line_len, max_line_gap)
+    
+    # Step6: weighted_img
+    result = weighted_img(lanes_image, image, α=0.8, β=1., γ=0.)
+    return result
 ```
 
 
