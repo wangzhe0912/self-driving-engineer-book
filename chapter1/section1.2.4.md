@@ -173,9 +173,9 @@ def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
 
 def hough_lines(img, rho, theta, threshold, min_line_len, max_line_gap):
     """
-    `img` should be the output of a Canny transform.
-        
-    Returns an image with hough lines drawn.
+    找出霍夫变换线
+    其中，img应该是Canny边缘检测的输出
+    返回结果是经过霍夫变换找到的线段
     """
     lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)
     line_img = np.zeros((img.shape[0], img.shape[1], 3), dtype=np.uint8)
