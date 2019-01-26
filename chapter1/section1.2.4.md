@@ -191,7 +191,45 @@ os.listdir("test_images/")
 可以看到test_images目录下有如下7副图像。
 ![7 img](/assets/29.jpg)
 
+第五步：利用之前的辅助函数构建车道线的处理流程
+```python
+# TODO: Build your pipeline that will draw lane lines on the test_images
+# then save them to the test_images_output directory.
+# # import time
 
+ori_image = mpimg.imread('test_images/solidWhiteRight.jpg')
+# Step1: grayscale
+image = grayscale(ori_image)
+plt.imshow(image, cmap='gray')
+# Step2: canny
+# time.sleep(1)
+image = canny(image, 50, 150)
+plt.imshow(image, cmap='gray')
+
+# Step3: gaussian blur
+image = gaussian_blur(image, 9)
+plt.imshow(image, cmap='gray')
+
+# Step4: region_of_interest
+# vertices = np.array([[0,500], [500,300],[900,500], [0,500]])
+imshape = image.shape
+print(imshape)
+vertices = np.array([[(0,imshape[0]),(500, 300), (501, 300), (imshape[1],imshape[0])]], dtype=np.int32)
+image = region_of_interest(image, vertices)
+plt.imshow(image, cmap='gray')
+
+# Step5: 
+rho = 2  # distance resolution in pixels of the Hough grid
+theta = 2 * np.pi/180  # angular resolution in radians of the Hough grid
+threshold = 80     # minimum number of votes (intersections in Hough grid cell)
+min_line_len = 40  #minimum number of pixels making up a line
+max_line_gap = 3    # maximum gap in pixels between connectable line segments
+# line_image = np.copy(image)*0 
+image = hough_lines(image, rho, theta, threshold, min_line_len, max_line_gap)
+plt.imshow(image, cmap='gray')
+image = weighted_img(image, ori_image, α=0.8, β=1., γ=0.)
+plt.imshow(image)
+```
 
 
 
