@@ -244,9 +244,6 @@ imageio.plugins.ffmpeg.download()
 from moviepy.editor import VideoFileClip
 from IPython.display import HTML
 def process_image(image):
-    # NOTE: The output you return should be a color image (3 channel) for processing video below
-    # TODO: put your pipeline here,
-    # you should return the final output (image where lines are drawn on lanes)
     # Step1: gray_image
     gray_image = grayscale(image)
     
