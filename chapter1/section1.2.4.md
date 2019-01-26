@@ -186,15 +186,11 @@ def hough_lines(img, rho, theta, threshold, min_line_len, max_line_gap):
 
 def weighted_img(img, initial_img, α=0.8, β=1., γ=0.):
     """
-    `img` is the output of the hough_lines(), An image with lines drawn on it.
-    Should be a blank image (all black) with lines drawn on it.
-    
-    `initial_img` should be the image before any processing.
-    
-    The result image is computed as follows:
-    
-    initial_img * α + img * β + γ
-    NOTE: initial_img and img must be the same shape!
+    img是通过霍夫变换找到的车道线
+    initial_img是原始的图像文件
+    处理方式如下：initial_img * α + img * β + γ
+    得到的结果是将通过霍夫变换找到的车道线标注到原始图像中。
+    Ps：initial_img and img的大小应该一致。
     """
     return cv2.addWeighted(initial_img, α, img, β, γ)
 ```
