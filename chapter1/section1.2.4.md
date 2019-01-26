@@ -230,7 +230,8 @@ time.sleep(5)
 image = weighted_img(image, ori_image, α=0.8, β=1., γ=0.)
 plt.imshow(image)
 ```
-
+可以看到，经过一系列处理后，得到的结果如下：
+![processed_img](/assets/30.jpg)
 
 
 
