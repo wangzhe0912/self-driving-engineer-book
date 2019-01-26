@@ -193,7 +193,6 @@ os.listdir("test_images/")
 
 第五步：利用之前的辅助函数构建车道线的处理流程
 ```python
-
 ori_image = mpimg.imread('test_images/solidWhiteRight.jpg')
 # Step1: grayscale
 image = grayscale(ori_image)
