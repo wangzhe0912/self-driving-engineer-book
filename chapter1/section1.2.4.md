@@ -43,6 +43,7 @@ import math
 def grayscale(img):
     """
     灰度变化函数
+    该函数会返回一个单通道的图像
     This will return an image with only one color channel
     but NOTE: to see the returned image as grayscale
     (assuming your grayscaled image is called 'gray')
