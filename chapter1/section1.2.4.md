@@ -203,7 +203,7 @@ time.sleep(1)
 image = canny(image, 50, 150)
 plt.imshow(image, cmap='gray')
 
-# Step3: gaussian blur
+# Step3: 高斯平滑滤波
 image = gaussian_blur(image, 9)
 plt.imshow(image, cmap='gray')
 
