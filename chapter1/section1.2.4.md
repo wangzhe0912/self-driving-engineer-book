@@ -199,21 +199,24 @@ ori_image = mpimg.imread('test_images/solidWhiteRight.jpg')
 image = grayscale(ori_image)
 plt.imshow(image, cmap='gray')
 # Step2: canny边缘检测
-time.sleep(1)
+time.sleep(5)
 image = canny(image, 50, 150)
 plt.imshow(image, cmap='gray')
 
 # Step3: 高斯平滑滤波
+time.sleep(5)
 image = gaussian_blur(image, 9)
 plt.imshow(image, cmap='gray')
 
 # Step4: 感兴趣区域提取
+time.sleep(5)
 imshape = image.shape
 vertices = np.array([[(0,imshape[0]),(500, 300), (501, 300), (imshape[1],imshape[0])]], dtype=np.int32)
 image = region_of_interest(image, vertices)
 plt.imshow(image, cmap='gray')
 
 # Step5: 霍夫变换
+time.sleep(5)
 rho = 2  # distance resolution in pixels of the Hough grid
 theta = 2 * np.pi/180  # angular resolution in radians of the Hough grid
 threshold = 80     # minimum number of votes (intersections in Hough grid cell)
@@ -223,6 +226,7 @@ image = hough_lines(image, rho, theta, threshold, min_line_len, max_line_gap)
 plt.imshow(image, cmap='gray')
 
 # Step6：最终结果展示
+time.sleep(5)
 image = weighted_img(image, ori_image, α=0.8, β=1., γ=0.)
 plt.imshow(image)
 ```
