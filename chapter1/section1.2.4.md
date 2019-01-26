@@ -86,7 +86,7 @@ def region_of_interest(img, vertices):
     # 调用fillPoly函数对感兴趣区域填充值
     cv2.fillPoly(mask, vertices, ignore_mask_color)
     
-    #returning the image only where mask pixels are nonzero
+    # 仅保留感兴趣区域的值
     masked_image = cv2.bitwise_and(img, mask)
     return masked_image
 
