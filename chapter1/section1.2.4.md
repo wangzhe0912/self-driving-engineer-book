@@ -44,26 +44,31 @@ def grayscale(img):
     """
     灰度变化函数
     该函数会返回一个单通道的图像
-    This will return an image with only one color channel
-    but NOTE: to see the returned image as grayscale
-    (assuming your grayscaled image is called 'gray')
-    you should call plt.imshow(gray, cmap='gray')
+    Ps：需要注意的是，如果想要显示该图像，需要在imshow函数中添加cmap='gray'参数，例如
+    plt.imshow(gray, cmap='gray')
     """
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    # Or use BGR2GRAY if you read an image with cv2.imread()
+    # 如果是使用cv2.imread()读取图像，则需要使用BGR2GRAY进行转换，如下：
     # return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
     
 def canny(img, low_threshold, high_threshold):
-    """Applies the Canny transform"""
+    """
+    使用canny边缘检测算法
+    """
     return cv2.Canny(img, low_threshold, high_threshold)
 
+
 def gaussian_blur(img, kernel_size):
-    """Applies a Gaussian Noise kernel"""
+    """
+    高斯平滑
+    """
     return cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)
+
 
 def region_of_interest(img, vertices):
     """
-    Applies an image mask.
+    感兴趣区域提取
     
     Only keeps the region of the image defined by the polygon
     formed from `vertices`. The rest of the image is set to black.
