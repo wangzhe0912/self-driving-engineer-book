@@ -74,17 +74,16 @@ def region_of_interest(img, vertices):
     formed from `vertices`. The rest of the image is set to black.
     `vertices` should be a numpy array of integer points.
     """
-    #defining a blank mask to start with
+    # 初始化一个空的感兴趣预期
     mask = np.zeros_like(img)   
-    
-    #defining a 3 channel or 1 channel color to fill the mask with depending on the input image
+    # 根据图像的类型，定义对应的感兴趣区域的填充值
     if len(img.shape) > 2:
         channel_count = img.shape[2]  # i.e. 3 or 4 depending on your image
         ignore_mask_color = (255,) * channel_count
     else:
         ignore_mask_color = 255
         
-    #filling pixels inside the polygon defined by "vertices" with the fill color    
+    # 调用fillPoly函数对感兴趣区域填充值
     cv2.fillPoly(mask, vertices, ignore_mask_color)
     
     #returning the image only where mask pixels are nonzero
