@@ -193,12 +193,13 @@ os.listdir("test_images/")
 
 第五步：利用之前的辅助函数构建车道线的处理流程
 ```python
+import time
 ori_image = mpimg.imread('test_images/solidWhiteRight.jpg')
 # Step1: 灰度变化
 image = grayscale(ori_image)
 plt.imshow(image, cmap='gray')
-# Step2: canny
-# time.sleep(1)
+# Step2: canny边缘检测
+time.sleep(1)
 image = canny(image, 50, 150)
 plt.imshow(image, cmap='gray')
 
