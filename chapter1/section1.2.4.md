@@ -182,3 +182,33 @@ def weighted_img(img, initial_img, α=0.8, β=1., γ=0.):
     """
     return cv2.addWeighted(initial_img, α, img, β, γ)
 ```
+
+第四步：列出待测试图像
+```python
+import os
+os.listdir("test_images/")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
