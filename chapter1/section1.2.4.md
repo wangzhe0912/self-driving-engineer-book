@@ -280,6 +280,12 @@ clip1 = VideoFileClip("test_videos/solidWhiteRight.mp4")
 # clip1 = VideoFileClip("test_videos/solidWhiteRight.mp4").subclip(0,5)
 white_clip = clip1.fl_image(process_image)
 %time white_clip.write_videofile(white_output, audio=False)
+# 显示该视频
+HTML("""
+<video width="960" height="540" controls>
+  <source src="{0}">
+</video>
+""".format(white_output))
 ```
 
 
