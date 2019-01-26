@@ -188,7 +188,8 @@ def weighted_img(img, initial_img, α=0.8, β=1., γ=0.):
 import os
 os.listdir("test_images/")
 ```
-
+可以看到test_images目录下有如下7副图像。
+![7 img](/assets/29.jpg)
 
 
 
