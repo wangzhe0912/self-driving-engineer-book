@@ -94,8 +94,8 @@ def region_of_interest(img, vertices):
 def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
     """
     用于将检测到的车道线显示到图像中的函数
-    我们可以通过线段的斜率(y1 - y2) / (x1 - x2)
-找出哪些线段属于左侧车道线，哪些线段属于右侧车道线。
+    我们可以通过线段的斜率(y1 - y2) / (x1 - x2)找出哪些线段属于左侧车道线，哪些线段属于右侧车道线。
+    接下来，我们可以分别对属于两条车道线的线段位置进行求平均值，然后再扩展至车道的首位两端。
     
     """
     left_list = []
@@ -110,9 +110,9 @@ def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
                 # left
                 left_list.append([x1, y1, x2, y2])
             else:
-                # stash data
+                # 脏数据
                 pass
-    # separate calculate the sum of k, b of left line and right line
+    # 分别计算左右车道的k和b的平均值，然后将线段在图像中显示出来
     try:
         left_k_sum = 0
         left_b_sum = 0
@@ -136,7 +136,6 @@ def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
         print(str(e))
 
     try:
-        # separate record the point of left line and right line
         right_k_sum = 0
         right_b_sum = 0
         right_min_point = (1000, 0)
