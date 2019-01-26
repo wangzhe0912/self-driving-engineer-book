@@ -233,9 +233,12 @@ plt.imshow(image)
 可以看到，经过一系列处理后，得到的结果如下：
 ![processed_img](/assets/30.jpg)
 
-
-
-
+第六步：基于视频的处理
+下面，我们将会完成一个更Cool的事情，在视频上标注车道线~代码库中提供了两个视频可以用于测试你的算法。
+Ps：对于视频的处理需要依赖于ffmpeg exe文件，可以通过如下方式进行下载。
+```
+imageio.plugins.ffmpeg.download()
+```
 
 
 
