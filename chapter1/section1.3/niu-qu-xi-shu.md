@@ -169,16 +169,3 @@ ax2.imshow(undistorted)
 ax2.set_title('Undistorted Image', fontsize=50)
 plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
