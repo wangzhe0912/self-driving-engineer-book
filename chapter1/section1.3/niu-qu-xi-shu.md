@@ -129,6 +129,11 @@ import matplotlib.image as mpimg
 # 所有图像使用同一个照相机针对同一个棋盘，仅仅拍摄角度和距离不一致
 objpoints = []   # 真实世界中的三维图像点
 imgpoints = []   # 图像平台中的二维点
+
+# 准备objpoint，例如(0,0,0)，(7,5,0)
+objp = np.zeros((6 * 8, 3), np.float32)
+
+
 # 读取一张检测图像，用于根据得到的失真系数进行图像校准并检测校准效果
 
 
