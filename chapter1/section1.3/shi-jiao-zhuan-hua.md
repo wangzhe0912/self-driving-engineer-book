@@ -67,6 +67,19 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+
+img = mpimg.imread('stopsign.jpg')
+
+img_size = (img.shape[1], img.shape[0])
+
+# 原始图像中的四个点
+src = np.float32([
+  [850, 320],
+  [865, 450],
+  [533, 350],
+  [535, 210]
+])
+
 ```
 
 
