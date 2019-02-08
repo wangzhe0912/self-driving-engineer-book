@@ -21,7 +21,7 @@
   * [1.3 摄像机校准](chapter1/section1.3.md)
     * [摄像机在图像识别中的应用](chapter1/section1.3/1.md)
     * [图像校准](chapter1/section1.3/niu-qu-xi-shu.md)
-    * [视角转化](chapter1/section1.3/shi-jiao-zhuan-hua.md)
+    * [透视变换](chapter1/section1.3/shi-jiao-zhuan-hua.md)
   * [1.4 梯度](chapter1/section1.4.md)
   * [1.5 颜色空间](chapter1/section1.5.md)
   * [1.6 高级计算机视觉](chapter1/section1.6.md)
