@@ -40,13 +40,13 @@ Question：图像失真会带来哪些影响？
 关于径向失真，存在如下三个失真系数：$$k_1, k_2, k_3$$。为了校准由于径向失真导致的图像扭曲，我们可以使用根据如下失真公式进行推到处理：
 
 $$
-x = x_{correct}(1 + k_1r^2 + k_2r^4 + k_3r^6)
+x = x_{corrected}(1 + k_1r^2 + k_2r^4 + k_3r^6)
 $$
 $$
-y = y_{correct}(1 + k_1r^2 + k_2r^4 + k_3r^6)
+y = y_{corrected}(1 + k_1r^2 + k_2r^4 + k_3r^6)
 $$
 
-在上述公式中，x和y表示失真图像中的某一个点。x_correct和y_correct表示失真对象中x,y点对应于原始图像中点的坐标。x_c和y_c表示原始图像中的中心点。r表示的则是在原始图像中，x_correct,y_correct到x_c,y_c点的距离。如下图所示：
+在上述公式中，x和y表示失真图像中的某一个点。x_corrected和y_corrected表示失真对象中x,y点对应于原始图像中点的坐标。x_c和y_c表示原始图像中的中心点。r表示的则是在原始图像中，x_corrected,y_corrected到x_c,y_c点的距离。如下图所示：
 
 ![计算逻辑](/assets/38.jpg)
 
@@ -55,10 +55,10 @@ Ps：虽然失真系数k3对于径向失真存在一定影响，然而，对于�
 同样，对于切向畸变而言，我们也可以使用如下的公式进行图像校准：
 
 $$
-x = x_{correct}(1 + k_1r^2 + k_2r^4 + k_3r^6)
+x_{corrected} = x + [2p_1xy + p_2(r^2+2x^2)]
 $$
 $$
-y = y_{correct}(1 + k_1r^2 + k_2r^4 + k_3r^6)
+y_{corrected} = y + [p_1(r^2+2y^2) + 2p_2xy]
 $$
 
 
