@@ -98,22 +98,21 @@ import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-# prepare object points
+# 计算交点数量
 nx = 8 # 数出横向存在多少个内测交点
-ny = 6 # 数出横向存在多少个内测交点
+ny = 6 # 数出纵向存在多少个内测交点
 
-
-# Make a list of calibration images
+# 读取原始图像
 fname = 'calibration_test.png'
 img = cv2.imread(fname)
 
-# Convert to grayscale
+# 对图像进行灰度变换
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# Find the chessboard corners
+# 输入灰度图像和交点数量，用于找出交点
 ret, corners = cv2.findChessboardCorners(gray, (nx, ny), None)
 
-# If found, draw corners
+# 如果找点乐交点，则在图像中画出所有交点
 if ret == True:
     # Draw and display the corners
     cv2.drawChessboardCorners(img, (nx, ny), corners, ret)
