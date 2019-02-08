@@ -90,6 +90,10 @@ dst = np.float32([
 
 # 计算透视变换矩阵M
 M = cv2.getPerspectiveTransform(src, dst)
+
+# 对原始图像使用变换矩阵
+
+
 ```
 
 
