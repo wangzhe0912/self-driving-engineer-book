@@ -119,6 +119,12 @@ if ret == True:
 ```
 
 接下来，我们将学习完整的图像校准的实现。
+```python
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
 
 
 
