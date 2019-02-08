@@ -41,8 +41,7 @@ Question：图像失真会带来哪些影响？
 
 $$
 x = x_{corrected}(1 + k_1r^2 + k_2r^4 + k_3r^6)
-$$
-$$
+\\
 y = y_{corrected}(1 + k_1r^2 + k_2r^4 + k_3r^6)
 $$
 
