@@ -134,14 +134,16 @@ imgpoints = []   # 图像平台中的二维点
 objp = np.zeros((6 * 8, 3), np.float32)
 objp[:,:,2] = np.mgrid[0:8, 0:6].T.reshape(-1,2)
 
-img = cv2.imread('test_image.png')
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-ret, corners = cv2.findChessboardCorners(gray, (8, 6), None)
-if ret == True:
-    objpoints.append(objp)
-    imgpoints.append(corners)
-
-
+# 准备的多张图像
+images_list = ['image1.png']
+for image in images_list:
+    # 依次处理每张图像
+    img = cv2.imread(image)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    ret, corners = cv2.findChessboardCorners(gray, (8, 6), None)
+    if ret == True:
+        objpoints.append(objp)
+        imgpoints.append(corners)
 
 
 
