@@ -93,6 +93,14 @@ M = cv2.getPerspectiveTransform(src, dst)
 
 # 对原始图像使用变换矩阵
 warped = cv2.warpPerspective(img, M, img_size, flags=cv2.INTER_LINEAR) # INTER_LINEAR线性内插法补点
+
+# 显示变换后的图像
+f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 10))
+ax1.set_title("source")
+ax1.imshow(img)
+ax2.set_title("warpped")
+ax1.imshow(img)
+
 ```
 
 
