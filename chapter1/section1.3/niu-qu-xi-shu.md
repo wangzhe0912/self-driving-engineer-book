@@ -134,7 +134,7 @@ imgpoints = []   # 图像平台中的二维点
 objp = np.zeros((6 * 8, 3), np.float32)
 objp[:,:,2] = np.mgrid[0:8, 0:6].T.reshape(-1,2)
 
-# 准备的多张图像
+# 读取准备的多张图像
 images_list = ['image1.png']
 for image in images_list:
     # 依次处理每张图像
@@ -145,6 +145,8 @@ for image in images_list:
         objpoints.append(objp)
         imgpoints.append(corners)
 
+# 计算失真系数
+ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
 
 # 读取一张检测图像，用于根据得到的失真系数进行图像校准并检测校准效果
@@ -186,7 +188,7 @@ def cal_undistort(img, objpoints, imgpoints):
     # Use cv2.calibrateCamera() and cv2.undistort()
     # undist = np.copy(img)  # Delete this line
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-    ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
+    
     undist = cv2.undistort(img, mtx, dist, None, mtx)
     return undist
 
