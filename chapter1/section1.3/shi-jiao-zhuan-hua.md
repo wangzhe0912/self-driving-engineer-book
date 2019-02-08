@@ -99,8 +99,7 @@ f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 10))
 ax1.set_title("source")
 ax1.imshow(img)
 ax2.set_title("warpped")
-ax1.imshow(img)
-
+ax1.imshow(warped)
 ```
 
 
