@@ -46,7 +46,7 @@ $$
 y = y_{correct}(1 + k_1r^2 + k_2r^4 + k_3r^6)
 $$
 
-在上述公式中，x和y表示失真图像中的某一个点。x_correct和y_correct表示失真对象中x,y点对应于原始图像中点的坐标。x_c和y_c表示原始图像中的中心点。
+在上述公式中，x和y表示失真图像中的某一个点。x_correct和y_correct表示失真对象中x,y点对应于原始图像中点的坐标。x_c和y_c表示原始图像中的中心点。r表示的则是在原始图像中，x_correct,y_correct到x_c,y_c点的距离。
 
 
 
