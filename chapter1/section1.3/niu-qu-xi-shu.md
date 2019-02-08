@@ -112,7 +112,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # 输入灰度图像和交点数量，用于找出交点
 ret, corners = cv2.findChessboardCorners(gray, (nx, ny), None)
 
-# 如果找点乐交点，则在图像中画出所有交点
+# 如果找点了交点，则在图像中画出所有交点
 if ret == True:
     cv2.drawChessboardCorners(img, (nx, ny), corners, ret)
     plt.imshow(img)
