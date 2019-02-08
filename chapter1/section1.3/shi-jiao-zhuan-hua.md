@@ -92,7 +92,7 @@ dst = np.float32([
 M = cv2.getPerspectiveTransform(src, dst)
 
 # 对原始图像使用变换矩阵
-warped = cv2.warpPerspective(img, M, img_size, flags=cv2.INTER_LINEAR) # INTER_LINEAR
+warped = cv2.warpPerspective(img, M, img_size, flags=cv2.INTER_LINEAR) # INTER_LINEAR线性内插法补点
 ```
 
 
