@@ -148,7 +148,6 @@ for image in images_list:
 # 计算失真系数
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
-
 # 读取一张检测图像，用于根据得到的失真系数进行图像校准并检测校准效果
 
 
