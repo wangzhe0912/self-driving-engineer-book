@@ -145,6 +145,11 @@ for image in images_list:
         objpoints.append(objp)
         imgpoints.append(corners)
 
+# 读取处理好的校准图像
+# dist_pickle = pickle.load( open( "wide_dist_pickle.p", "rb" ) )
+# objpoints = dist_pickle["objpoints"]
+# imgpoints = dist_pickle["imgpoints"]
+
 # 读取一张检测图像，计算失真系数并用于图像校准并检测校准效果
 img = cv2.imread('test_image.png')
 
