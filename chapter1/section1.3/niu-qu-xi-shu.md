@@ -118,6 +118,7 @@ if ret == True:
     plt.imshow(img)
 ```
 
+接下来，我们将学习完整的图像校准的实现。
 
 
 
