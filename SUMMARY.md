@@ -19,7 +19,7 @@
     * [项目指引](chapter1/section1.2.3.md)
     * [项目解决方案](chapter1/section1.2.4.md)
   * [1.3 摄像机校准](chapter1/section1.3.md)
-    * [摄像机对图像识别的影响](chapter1/section1.3/1.md)
+    * [摄像机在图像识别中的应用](chapter1/section1.3/1.md)
     * [扭曲系数](chapter1/section1.3/niu-qu-xi-shu.md)
     * [视角转化](chapter1/section1.3/shi-jiao-zhuan-hua.md)
   * [1.4 梯度](chapter1/section1.4.md)
