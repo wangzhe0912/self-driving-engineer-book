@@ -125,7 +125,8 @@ import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-
+# 读取棋盘的多张拍摄图像，建议使用至少20张图像
+# 所有图像使用同一个照相机针对同一个棋盘，仅仅拍摄角度和距离不一致
 
 
 ```
