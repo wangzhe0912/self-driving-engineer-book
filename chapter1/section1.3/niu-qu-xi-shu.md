@@ -59,4 +59,4 @@ x_{corrected} = x + [2p_1xy + p_2(r^2+2x^2)]
 y_{corrected} = y + [p_1(r^2+2y^2) + 2p_2xy]
 $$
 
-**Question**：
+**Question**：针孔摄像机模型和镜头摄像机的模型区别是什么？
