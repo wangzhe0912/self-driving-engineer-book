@@ -23,6 +23,7 @@
     * [图像校准](chapter1/section1.3/niu-qu-xi-shu.md)
     * [透视变换](chapter1/section1.3/shi-jiao-zhuan-hua.md)
   * [1.4 梯度](chapter1/section1.4.md)
+    * [Sobel算子](chapter1/section1.4/sobelsuan-zi.md)
   * [1.5 颜色空间](chapter1/section1.5.md)
   * [1.6 高级计算机视觉](chapter1/section1.6.md)
   * [1.7 实战项目：高级车道线检测](chapter1/section1.7.md)
