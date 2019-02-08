@@ -46,7 +46,7 @@ $$
 y_{distorted} = y_{ideal}(1 + k_1r^2 + k_2r^4 + k_3r^6)
 $$
 
-
+在上述公式中，x_distorted和y_distorted分别对应于下图中的x和y，表示失真图像中的某一个点。
 
 
 
