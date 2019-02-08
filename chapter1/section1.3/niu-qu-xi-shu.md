@@ -114,7 +114,6 @@ ret, corners = cv2.findChessboardCorners(gray, (nx, ny), None)
 
 # 如果找点乐交点，则在图像中画出所有交点
 if ret == True:
-    # Draw and display the corners
     cv2.drawChessboardCorners(img, (nx, ny), corners, ret)
     plt.imshow(img)
 ```
