@@ -81,7 +81,30 @@ Step3. 将计算得到的失真系数用于校准后续摄像机拍摄得到的�
 ### Python实现
 在接下来的练习中，我们将使用opencv中相关的函数进行图像校准。
 
-首先，我们需要使用`findChessboardCorners`和`drawChessboardCorners`函数来自动查找和绘制棋盘图案图像中的角。
+首先，我们需要使用`findChessboardCorners()`和`drawChessboardCorners()`函数来自动查找和绘制棋盘图案图像中的角。
+
+[findChessboardCorners()官方文档](http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#cv2.findChessboardCorners)
+[drawChessboardCorners()官方文档](http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#cv2.drawChessboardCorners)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
