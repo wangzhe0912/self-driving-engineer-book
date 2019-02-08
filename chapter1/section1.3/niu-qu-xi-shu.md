@@ -79,7 +79,9 @@ Step2. 检测失真误差并计算失真系数
 Step3. 将计算得到的失真系数用于校准后续摄像机拍摄得到的图像。
 
 ### Python实现
+在接下来的练习中，我们将使用opencv中相关的函数进行图像校准。
 
+首先，我们需要使用`findChessboardCorners`和`drawChessboardCorners`函数来自动查找和绘制棋盘图案图像中的角。
 
 
 
