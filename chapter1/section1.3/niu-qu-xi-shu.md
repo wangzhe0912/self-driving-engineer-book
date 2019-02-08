@@ -86,8 +86,9 @@ Step3. 将计算得到的失真系数用于校准后续摄像机拍摄得到的�
 [findChessboardCorners()官方文档](http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#cv2.findChessboardCorners)
 [drawChessboardCorners()官方文档](http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#cv2.drawChessboardCorners)
 
-
-
+通过应用上述的两个函数，我们可以得到一个所下图所示的图片：
+![画出图像中所有的角点](/assets/41.jpg)
+在该图像中，我们找出了图像中所有的角点（两个黑色和两个白色方块相交的点）
 
 
 
