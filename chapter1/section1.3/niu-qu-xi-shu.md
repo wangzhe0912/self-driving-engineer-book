@@ -134,6 +134,10 @@ imgpoints = []   # 图像平台中的二维点
 objp = np.zeros((6 * 8, 3), np.float32)
 objp[:,:,2] = np.mgrid[0:8, 0:6].T.reshape(-1,2)
 
+img = cv2.imread('test_image.png')
+
+
+
 # 读取一张检测图像，用于根据得到的失真系数进行图像校准并检测校准效果
 
 
