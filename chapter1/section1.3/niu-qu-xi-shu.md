@@ -99,8 +99,9 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 # prepare object points
-nx = 8 #TODO: enter the number of inside corners in x
-ny = 6 #TODO: enter the number of inside corners in y
+nx = 8 # 数出横向存在多少个内测交点
+ny = 6 # 数出横向存在多少个内测交点
+
 
 # Make a list of calibration images
 fname = 'calibration_test.png'
