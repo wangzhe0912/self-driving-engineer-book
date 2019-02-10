@@ -78,9 +78,11 @@ plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
 然而，对于车道线检测问题而言，我们更加关心的是某个特定方向的边界线，因此，我们可以更近一步的考虑梯度的方向。
 
+梯度的方向计算公式如下：
 
-
-
+$$
+arctan(sobel_y / sobel_x)
+$$
 
 
 
