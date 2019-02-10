@@ -128,9 +128,9 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     binary_output[(gradient_sobel >= thresh[0]) & (gradient_sobel <= thresh[1])] = 1
     return binary_output
     
-# Run the function
+# 调用该函数
 dir_binary = dir_threshold(image, sobel_kernel=15, thresh=(0.7, 1.3))
-# Plot the result
+# 绘图
 f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
 f.tight_layout()
 ax1.imshow(image)
