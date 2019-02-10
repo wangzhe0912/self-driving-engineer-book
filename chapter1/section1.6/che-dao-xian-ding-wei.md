@@ -33,6 +33,13 @@ histogram = hist(img)
 plt.plot(histogram)
 ```
 
+得到的结果如下：
+
+
+
+
+
+
 
 ### 滑窗法1
 
