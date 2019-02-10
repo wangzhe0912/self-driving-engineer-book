@@ -22,7 +22,7 @@
     * [摄像机在图像识别中的应用](chapter1/section1.3/1.md)
     * [图像校准](chapter1/section1.3/niu-qu-xi-shu.md)
     * [透视变换](chapter1/section1.3/shi-jiao-zhuan-hua.md)
-  * [1.4 梯度](chapter1/section1.4.md)
+  * [1.4 梯度详解](chapter1/section1.4.md)
     * [Sobel算子](chapter1/section1.4/sobelsuan-zi.md)
   * [1.5 颜色空间](chapter1/section1.5.md)
   * [1.6 高级计算机视觉](chapter1/section1.6.md)
