@@ -121,9 +121,7 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     abs_sobelx = np.abs(sobelx)
     abs_sobely = np.abs(sobely)
     gradient_sobel = np.arctan2(abs_sobely, abs_sobelx)
-    
     binary_output = np.zeros_like(gradient_sobel)
-    
     binary_output[(gradient_sobel >= thresh[0]) & (gradient_sobel <= thresh[1])] = 1
     return binary_output
     
