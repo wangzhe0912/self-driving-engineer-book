@@ -28,7 +28,7 @@
     * [颜色阈值](chapter1/section1.5/yan-se-yu-zhi.md)
     * [HLS](chapter1/section1.5/hls.md)
     * [颜色与梯度结合](chapter1/section1.5/yan-se-yu-ti-du-jie-he.md)
-  * [1.6 高级计算机视觉](chapter1/section1.6.md)
+  * [1.6 计算机视觉综合](chapter1/section1.6.md)
   * [1.7 实战项目：高级车道线检测](chapter1/section1.7.md)
 * [第2章 神经网络](chapter2/README.md)
 * [第3章 传感器融合](chapter3/README.md)
