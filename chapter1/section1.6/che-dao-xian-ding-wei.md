@@ -73,31 +73,28 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import cv2
 
-# Load our image
+# 加载图像
 binary_warped = mpimg.imread('warped_example.jpg')
 
 def find_lane_pixels(binary_warped):
-    # Take a histogram of the bottom half of the image
+    # binary_warped：经过透视变换后的二值图像
+    # 计算图像下半部分的直方图
     histogram = np.sum(binary_warped[binary_warped.shape[0]//2:,:], axis=0)
-    # Create an output image to draw on and visualize the result
+    # 生成一个输出图像用于可视化显示
     out_img = np.dstack((binary_warped, binary_warped, binary_warped))
-    # Find the peak of the left and right halves of the histogram
-    # These will be the starting point for the left and right lines
+    # 根据直方图信息找出左右两个车道线的划窗起点
     midpoint = np.int(histogram.shape[0]//2)
     leftx_base = np.argmax(histogram[:midpoint])
     rightx_base = np.argmax(histogram[midpoint:]) + midpoint
 
-    # HYPERPARAMETERS
-    # Choose the number of sliding windows
+    # 自定义划窗超参数
     nwindows = 9
-    # Set the width of the windows +/- margin
     margin = 100
-    # Set minimum number of pixels found to recenter window
     minpix = 50
 
-    # Set height of windows - based on nwindows above and image shape
+    # 计算窗的高度
     window_height = np.int(binary_warped.shape[0]//nwindows)
-    # Identify the x and y positions of all nonzero pixels in the image
+    # 计算图像中所有非零像素点的x，y坐标
     nonzero = binary_warped.nonzero()
     nonzeroy = np.array(nonzero[0])
     nonzerox = np.array(nonzero[1])
