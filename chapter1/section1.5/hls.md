@@ -65,15 +65,17 @@ import matplotlib.image as mpimg
 import numpy as np
 import cv2
 
-# Read in an image, you can also try test1.jpg or test4.jpg
+# 读取图像
 image = mpimg.imread('test6.jpg') 
 
-# Define a function that thresholds the S-channel of HLS
-# Use exclusive lower bound (>) and inclusive upper (<=)
+# 使用S通道进行阈值处理
 def hls_select(img, thresh=(0, 255)):
-    # 1) Convert to HLS color space
-    # 2) Apply a threshold to the S channel
-    # 3) Return a binary image of threshold result
+    # img：输入图像
+    # thresh：阈值
+    # 处理步骤：
+    # 1) 转换至HLS空间
+    # 2) 对S通道进行阈值处理
+    # 3) 返回处理后的结果
     hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
     s = hls[:, :, 2]
     binary_output = np.zeros_like(s)
@@ -82,7 +84,7 @@ def hls_select(img, thresh=(0, 255)):
     
 hls_binary = hls_select(image, thresh=(100, 255))
 
-# Plot the result
+# 显示
 f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
 f.tight_layout()
 ax1.imshow(image)
@@ -92,20 +94,6 @@ ax2.set_title('Thresholded S', fontsize=50)
 plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 ```
 
+可以看到，利用S通道进行阈值处理后，得到的结果如下：
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](/assets/71.jpg)
