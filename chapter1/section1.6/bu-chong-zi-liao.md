@@ -13,3 +13,6 @@
 我们可以使用[KITTI road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php)数据集来建立我们的模型。
 
 
+
+[Lane Detection with Deep Learning (Part 1)](https://towardsdatascience.com/lane-detection-with-deep-learning-part-1-9e096f3320b7)
+[Lane Detection with Deep Learning (Part 2)](https://towardsdatascience.com/lane-detection-with-deep-learning-part-2-3ba559b5c5af)
