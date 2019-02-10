@@ -108,7 +108,7 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     # img：原始图像
     # sobel_kernel：核大小
     # thresh：阈值
-    # Apply the following steps to img
+    # 处理步骤
     # 1) Convert to grayscale
     # 2) Take the gradient in x and y separately
     # 3) Take the absolute value of the x and y gradients
