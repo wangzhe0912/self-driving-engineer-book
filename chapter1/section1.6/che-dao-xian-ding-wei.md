@@ -67,10 +67,6 @@ plt.plot(histogram)
 
 完整实现参考如下：
 
-```python
-
-```
-
 
 ### 滑窗法2
 
