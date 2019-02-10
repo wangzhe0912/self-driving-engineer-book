@@ -35,10 +35,6 @@ import pickle
 image = mpimg.imread('signs_vehicles_xygrad.png')
 
 # 定义一个sobel算子的阈值函数
-# Define a function that applies Sobel x or y, 
-# then takes an absolute value and applies a threshold.
-# Note: calling your function with orient='x', thresh_min=5, thresh_max=100
-# should produce output like the example image shown above this quiz.
 def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     
     # Apply the following steps to img
