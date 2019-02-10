@@ -35,7 +35,7 @@ plt.plot(histogram)
 
 得到的结果如下：
 
-
+![histogram](/assets/79.jpg)
 
 
 
