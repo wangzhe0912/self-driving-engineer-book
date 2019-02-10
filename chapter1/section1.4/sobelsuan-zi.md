@@ -72,6 +72,7 @@ plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
 通过上述代码，可以得到的结果如下：
 
+![梯度阈值](/assets/59.jpg)
 
 ### 梯度的方向
 
