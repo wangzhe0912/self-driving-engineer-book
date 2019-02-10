@@ -41,7 +41,7 @@ def pipeline(img, s_thresh=(170, 255), sx_thresh=(20, 100)):
     # S颜色通道过滤
     s_binary = np.zeros_like(s_channel)
     s_binary[(s_channel >= s_thresh[0]) & (s_channel <= s_thresh[1])] = 1
-    # Stack each channel
+    # 填充每个通道
     color_binary = np.dstack(( np.zeros_like(sxbinary), sxbinary, s_binary)) * 255
     # 结合二者的结果
     combined_binary = np.zeros_like(sxbinary)
