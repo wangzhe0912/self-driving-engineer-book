@@ -19,7 +19,7 @@ import matplotlib.image as mpimg
 
 image = mpimg.imread('bridge_shadow.jpg')
 
-# Edit this function to create your own pipeline.
+# 定义一个用于车道线检测的完整函数
 def pipeline(img, s_thresh=(170, 255), sx_thresh=(20, 100)):
     img = np.copy(img)
     # Convert to HLS color space and separate the V channel
