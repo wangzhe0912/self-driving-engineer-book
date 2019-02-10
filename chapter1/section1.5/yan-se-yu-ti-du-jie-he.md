@@ -47,7 +47,7 @@ def pipeline(img, s_thresh=(170, 255), sx_thresh=(20, 100)):
     
 result = pipeline(image)
 
-# Plot the result
+# 绘制图像
 f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
 f.tight_layout()
 
