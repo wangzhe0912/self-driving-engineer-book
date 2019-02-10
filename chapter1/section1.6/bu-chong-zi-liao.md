@@ -5,6 +5,6 @@
 
 ### 车道线语义分割
 
-[Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1605.06211)
+[Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1605.06211) E. Shelhamer, J. Long and T. Darrell
 
 
