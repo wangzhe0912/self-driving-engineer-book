@@ -70,6 +70,23 @@ ax2.set_title('Thresholded Gradient', fontsize=50)
 plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 ```
 
+### 梯度的方向
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
