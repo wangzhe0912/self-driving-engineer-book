@@ -36,12 +36,15 @@ image = mpimg.imread('signs_vehicles_xygrad.png')
 
 # 定义一个sobel算子的阈值函数
 def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
-    
-    # Apply the following steps to img
-    # 1) Convert to grayscale
-    # 2) Take the derivative in x or y given orient = 'x' or 'y'
-    # 3) Take the absolute value of the derivative or gradient
-    # 4) Scale to 8-bit (0 - 255) then convert to type = np.uint8
+    # img：输入图像
+    # orient：Sobel算子方向
+    # thresh_min：滤波最小阈值
+    # thresh_max：滤波最大阈值
+    # 具体步骤
+    # 1) 灰度变换
+    # 2) 根据输入方向求导数
+    # 3) 对导数的值取绝对值
+    # 4) 归一化至0-255
     # 5) Create a mask of 1's where the scaled gradient magnitude 
             # is > thresh_min and < thresh_max
     # 6) Return this mask as your binary_output image
