@@ -81,7 +81,8 @@ def hls_select(img, thresh=(0, 255)):
     binary_output = np.zeros_like(s)
     binary_output[(s > thresh[0]) & (s <= thresh[1])] = 1
     return binary_output
-    
+
+# 调用函数
 hls_binary = hls_select(image, thresh=(100, 255))
 
 # 显示
