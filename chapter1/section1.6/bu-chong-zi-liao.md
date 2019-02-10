@@ -22,7 +22,7 @@
 
 ### 其他的车道线检测方法
 
-
+[VPGNet: Vanishing Point Guided Network for Lane and Road Marking Detection and Recognition](https://arxiv.org/abs/1710.06288)
 
 
 
