@@ -31,7 +31,7 @@
   * [1.6 计算机视觉综合](chapter1/section1.6.md)
     * [图像级别处理](chapter1/section1.6/tu-xiang-ji-bie-chu-li.md)
     * [车道线定位](chapter1/section1.6/che-dao-xian-ding-wei.md)
-    * 曲率计算
+    * [曲率计算](chapter1/section1.6/qu-lv-ji-suan.md)
   * [1.7 实战项目：高级车道线检测](chapter1/section1.7.md)
 * [第2章 神经网络](chapter2/README.md)
 * [第3章 传感器融合](chapter3/README.md)
