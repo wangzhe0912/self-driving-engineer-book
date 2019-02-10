@@ -33,11 +33,11 @@
 
 [Learning to Map Vehicles into Bird's Eye View](https://arxiv.org/abs/1706.08442)A. Palazzi, et. al.
 
+摘要：
 
 
 
-
-
+你可能已经注意到上面的许多论文包括深度学习技术，这些技术现在在许多计算机视觉应用程序中普遍使用。更多关于深度学习的内容即将推出！
 
 
 
