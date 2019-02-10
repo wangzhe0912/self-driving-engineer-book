@@ -60,7 +60,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
 
 # 调用定义好的函数
 grad_binary = abs_sobel_thresh(image, orient='x', thresh_min=20, thresh_max=100)
-# Plot the result
+# 绘制图像
 f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
 f.tight_layout()
 ax1.imshow(image)
