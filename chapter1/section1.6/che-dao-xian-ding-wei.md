@@ -197,7 +197,103 @@ plt.imshow(out_img)
 
 具体实现如下：
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import cv2
 
+# 读取图像
+warped = mpimg.imread('warped_example.jpg')
+
+# 窗相关参数设置
+window_width = 50
+window_height = 80
+margin = 100
+
+
+def window_mask(width, height, img_ref, center, level):
+    # 窗函数区域二值化
+    output = np.zeros_like(img_ref)
+    output[int(img_ref.shape[0] - (level + 1) * height):int(img_ref.shape[0] - level * height),
+    max(0, int(center - width / 2)):min(int(center + width / 2), img_ref.shape[1])] = 1
+    return output
+
+
+def find_window_centroids(image, window_width, window_height, margin):
+    # 找出窗的质心
+    window_centroids = []  # 存储每个level中窗的左右车道线质心
+    window = np.ones(window_width)  # 创建窗模板
+
+    # 计算图像底部1/4的非零在x轴上每个点的非零像素点的数量
+    l_sum = np.sum(image[int(3 * image.shape[0] / 4):, :int(image.shape[1] / 2)], axis=0)
+    r_sum = np.sum(image[int(3 * image.shape[0] / 4):, int(image.shape[1] / 2):], axis=0)
+    # 计算出起始的左右车道线的起点
+    l_center = np.argmax(np.convolve(window, l_sum)) - window_width / 2
+    r_center = np.argmax(np.convolve(window, r_sum)) - window_width / 2 + int(image.shape[1] / 2)
+
+    # 将起始点放入之前初始化的列表中
+    window_centroids.append((l_center, r_center))
+
+    # 遍历每一层找出最大像素点的位置
+    for level in range(1, int(image.shape[0] / window_height)):
+        # 计算在当前层中，x轴上每个点对应的非零像素点的数量
+        image_layer = np.sum(
+            image[int(image.shape[0] - (level + 1) * window_height):int(image.shape[0] - level * window_height), :],
+            axis=0
+        )
+        # 对切面结果进行卷积计算
+        conv_signal = np.convolve(window, image_layer)
+        # Find the best left centroid by using past left center as a reference
+        # Use window_width/2 as offset because convolution signal reference is at right side of window, not center of window
+        # window_width / 2的偏移量是由于卷积信号的坐标在其右侧，而非中心
+        offset = window_width / 2
+        # 左侧车道线搜索的左右范围
+        l_min_index = int(max(l_center + offset - margin, 0))
+        l_max_index = int(min(l_center + offset + margin, image.shape[1]))
+        # 左侧车道线中在当前层的质心坐标
+        l_center = np.argmax(conv_signal[l_min_index:l_max_index]) + l_min_index - offset
+        # 右侧车道线搜索的左右范围
+        r_min_index = int(max(r_center + offset - margin, 0))
+        r_max_index = int(min(r_center + offset + margin, image.shape[1]))
+        # 右侧车道线中在当前层的质心坐标
+        r_center = np.argmax(conv_signal[r_min_index:r_max_index]) + r_min_index - offset
+        # 将找到的质心添加至列表中
+        window_centroids.append((l_center, r_center))
+
+    return window_centroids
+
+
+# 调用函数
+window_centroids = find_window_centroids(warped, window_width, window_height, margin)
+
+# 找到质心时
+if len(window_centroids) > 0:
+
+    # Points used to draw all the left and right windows
+    l_points = np.zeros_like(warped)
+    r_points = np.zeros_like(warped)
+
+    # 遍历每一层
+    for level in range(0, len(window_centroids)):
+        l_mask = window_mask(window_width, window_height, warped, window_centroids[level][0], level)
+        r_mask = window_mask(window_width, window_height, warped, window_centroids[level][1], level)
+        l_points[(l_points == 255) | ((l_mask == 1))] = 255
+        r_points[(r_points == 255) | ((r_mask == 1))] = 255
+
+    # 结果可视化
+    template = np.array(r_points + l_points, np.uint8)  # add both left and right window pixels together
+    zero_channel = np.zeros_like(template)  # create a zero color channel
+    template = np.array(cv2.merge((zero_channel, template, zero_channel)), np.uint8)  # make window pixels green
+    warpage = np.dstack((warped, warped, warped)) * 255  # making the original road pixels 3 color channels
+    output = cv2.addWeighted(warpage, 1, template, 0.5, 0.0)  # overlay the orignal road image with window results
+
+else:
+    # 没有找到质心
+    output = np.array(cv2.merge((warped, warped, warped)), np.uint8)
+
+# 图像可视化
+plt.imshow(output)
+plt.title('window fitting results')
 ```
 
 
