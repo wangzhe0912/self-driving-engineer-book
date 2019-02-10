@@ -31,9 +31,10 @@ import matplotlib.image as mpimg
 import pickle
 
 
-# Read in an image and grayscale it
+# 读取图像
 image = mpimg.imread('signs_vehicles_xygrad.png')
 
+# 定义一个sobel算子的阈值函数
 # Define a function that applies Sobel x or y, 
 # then takes an absolute value and applies a threshold.
 # Note: calling your function with orient='x', thresh_min=5, thresh_max=100
