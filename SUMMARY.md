@@ -34,6 +34,9 @@
     * [曲率计算](chapter1/section1.6/qu-lv-ji-suan.md)
     * [补充资料](chapter1/section1.6/bu-chong-zi-liao.md)
   * [1.7 实战项目：高级车道线检测](chapter1/section1.7.md)
+    * 项目基本要求
+    * 项目指引
+    * 项目解决方案
 * [第2章 神经网络](chapter2/README.md)
 * [第3章 传感器融合](chapter3/README.md)
 * [第4章 定位技术](chapter4/README.md)
