@@ -58,7 +58,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     binary_output[(scaled_sobel >= thresh_min) & (scaled_sobel <= thresh_max)] = 1
     return binary_output
 
-# Run the function
+# 调用定义好的函数
 grad_binary = abs_sobel_thresh(image, orient='x', thresh_min=20, thresh_max=100)
 # Plot the result
 f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
