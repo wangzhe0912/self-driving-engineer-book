@@ -25,7 +25,7 @@ def pipeline(img, s_thresh=(170, 255), sx_thresh=(20, 100)):
     # s_thresh：S通道的阈值
     # sx_thresh：Sobel梯度的阈值
     img = np.copy(img)
-    # Convert to HLS color space and separate the V channel
+    # 转换至HLS颜色空间
     hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
     l_channel = hls[:,:,1]
     s_channel = hls[:,:,2]
