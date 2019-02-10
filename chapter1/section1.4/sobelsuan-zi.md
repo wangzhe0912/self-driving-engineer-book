@@ -98,10 +98,9 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-import pickle
 
 
-# Read in an image
+# 读取图像
 image = mpimg.imread('signs_vehicles_xygrad.png')
 
 # Define a function that applies Sobel x and y, 
