@@ -103,9 +103,7 @@ import matplotlib.image as mpimg
 # 读取图像
 image = mpimg.imread('signs_vehicles_xygrad.png')
 
-# Define a function that applies Sobel x and y, 
-# then computes the direction of the gradient
-# and applies a threshold.
+# 定义一个计算梯度方向并过滤的函数.
 def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     
     # Apply the following steps to img
