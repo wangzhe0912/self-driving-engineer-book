@@ -26,10 +26,10 @@ def hist(img):
     histogram = np.sum(bottom_half, axis=0)
     return histogram
 
-# Create histogram of image binary activations
+# 调用函数
 histogram = hist(img)
 
-# Visualize the resulting histogram
+# 图像可视化
 plt.plot(histogram)
 ```
 
