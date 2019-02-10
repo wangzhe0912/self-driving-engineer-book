@@ -70,6 +70,9 @@ ax2.set_title('Thresholded Gradient', fontsize=50)
 plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 ```
 
+通过上述代码，可以得到的结果如下：
+
+
 ### 梯度的方向
 
 在上面的实战中，我们通过对梯度进行阈值化，可以较好的找到车道线；但是在这一过程中，还是有一些其他物体没有被过滤掉。
