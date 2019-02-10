@@ -109,12 +109,12 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     # sobel_kernel：核大小
     # thresh：阈值
     # 处理步骤
-    # 1) Convert to grayscale
-    # 2) Take the gradient in x and y separately
-    # 3) Take the absolute value of the x and y gradients
-    # 4) Use np.arctan2(abs_sobely, abs_sobelx) to calculate the direction of the gradient 
-    # 5) Create a binary mask where direction thresholds are met
-    # 6) Return this mask as your binary_output image
+    # 1) 灰度变换
+    # 2) 分别计算x方向和y方向的梯度
+    # 3) 对两个方向的梯度取绝对值
+    # 4) 计算梯度方向
+    # 5) 根据阈值进行过滤
+    # 6) 返回过滤后的图像
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=sobel_kernel)
     sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=sobel_kernel)
