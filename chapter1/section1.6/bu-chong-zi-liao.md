@@ -31,7 +31,7 @@
 
 ### 车辆检测
 
-[Learning to Map Vehicles into Bird's Eye View](https://arxiv.org/abs/1706.08442)
+[Learning to Map Vehicles into Bird's Eye View](https://arxiv.org/abs/1706.08442)A. Palazzi, et. al.
 
 
 
