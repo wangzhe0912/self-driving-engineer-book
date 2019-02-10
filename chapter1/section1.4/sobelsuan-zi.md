@@ -57,7 +57,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     binary_output = np.zeros_like(scaled_sobel)
     binary_output[(scaled_sobel >= thresh_min) & (scaled_sobel <= thresh_max)] = 1
     return binary_output
-    
+
 # Run the function
 grad_binary = abs_sobel_thresh(image, orient='x', thresh_min=20, thresh_max=100)
 # Plot the result
