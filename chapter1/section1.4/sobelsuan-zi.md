@@ -45,7 +45,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     # 2) 根据输入方向求导数
     # 3) 对导数的值取绝对值
     # 4) 将像素点的值归一化至0-255
-    # 5) 过滤阈值范围内的像素点
+    # 5) 将阈值范围内的像素点设置为1，其他像素点设置为0
     # 6) 返回结果
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     if orient == 'x':
