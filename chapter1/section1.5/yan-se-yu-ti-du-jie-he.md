@@ -29,8 +29,8 @@ def pipeline(img, s_thresh=(170, 255), sx_thresh=(20, 100)):
     hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
     l_channel = hls[:,:,1]
     s_channel = hls[:,:,2]
-    # Sobel x
-    sobelx = cv2.Sobel(l_channel, cv2.CV_64F, 1, 0) # Take the derivative in x
+    # 计算Sobel x梯度
+    sobelx = cv2.Sobel(l_channel, cv2.CV_64F, 1, 0)
     abs_sobelx = np.absolute(sobelx) # Absolute x derivative to accentuate lines away from horizontal
     scaled_sobel = np.uint8(255*abs_sobelx/np.max(abs_sobelx))
     
