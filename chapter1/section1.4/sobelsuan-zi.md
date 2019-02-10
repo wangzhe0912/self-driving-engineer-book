@@ -45,9 +45,8 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     # 2) 根据输入方向求导数
     # 3) 对导数的值取绝对值
     # 4) 归一化至0-255
-    # 5) Create a mask of 1's where the scaled gradient magnitude 
-            # is > thresh_min and < thresh_max
-    # 6) Return this mask as your binary_output image
+    # 5) 过滤阈值范围内的像素点
+    # 6) 返回结果
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     if orient == 'x':
         sobel = cv2.Sobel(gray, cv2.CV_64F, 1, 0)
