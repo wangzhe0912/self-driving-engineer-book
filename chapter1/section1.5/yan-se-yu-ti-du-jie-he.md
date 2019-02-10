@@ -21,6 +21,9 @@ image = mpimg.imread('bridge_shadow.jpg')
 
 # 定义一个用于车道线检测的完整函数
 def pipeline(img, s_thresh=(170, 255), sx_thresh=(20, 100)):
+    # img：输入图像
+    # s_thresh：S通道的阈值
+    # sx_thresh：Sobel梯度的阈值
     img = np.copy(img)
     # Convert to HLS color space and separate the V channel
     hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
