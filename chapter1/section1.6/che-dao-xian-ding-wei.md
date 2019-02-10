@@ -86,6 +86,8 @@ def find_lane_pixels(binary_warped):
     midpoint = np.int(histogram.shape[0]//2)
     leftx_base = np.argmax(histogram[:midpoint])
     rightx_base = np.argmax(histogram[midpoint:]) + midpoint
+    leftx_current = leftx_base
+    rightx_current = rightx_base
 
     # 自定义划窗超参数
     nwindows = 9
@@ -98,10 +100,7 @@ def find_lane_pixels(binary_warped):
     nonzero = binary_warped.nonzero()
     nonzeroy = np.array(nonzero[0])
     nonzerox = np.array(nonzero[1])
-    # Current positions to be updated later for each window in nwindows
-    leftx_current = leftx_base
-    rightx_current = rightx_base
-
+    # 初始化两个数组
     # Create empty lists to receive left and right lane pixel indices
     left_lane_inds = []
     right_lane_inds = []
