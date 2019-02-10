@@ -66,6 +66,125 @@ plt.plot(histogram)
 第四步：多项式拟合，即将所有找到的位于窗口内部的像素点拟合成为一条曲线。
 
 完整实现参考如下：
+```python
+import numpy as np
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+import cv2
+
+# 加载图像
+binary_warped = mpimg.imread('warped_example.jpg')
+
+def find_lane_pixels(binary_warped):
+    # binary_warped：经过透视变换后的二值图像
+    # 计算图像下半部分的直方图
+    histogram = np.sum(binary_warped[binary_warped.shape[0]//2:,:], axis=0)
+    # 生成一个输出图像用于可视化显示
+    out_img = np.dstack((binary_warped, binary_warped, binary_warped))
+    # 根据直方图信息找出左右两个车道线的划窗起点
+    midpoint = np.int(histogram.shape[0]//2)
+    leftx_base = np.argmax(histogram[:midpoint])
+    rightx_base = np.argmax(histogram[midpoint:]) + midpoint
+    leftx_current = leftx_base
+    rightx_current = rightx_base
+    # 自定义划窗超参数
+    nwindows = 9
+    margin = 100
+    minpix = 50
+
+    # 计算窗的高度
+    window_height = np.int(binary_warped.shape[0]//nwindows)
+    # 计算图像中所有非零像素点的x，y坐标
+    nonzero = binary_warped.nonzero()
+    nonzeroy = np.array(nonzero[0])
+    nonzerox = np.array(nonzero[1])
+
+    # 初始化两个数组用于存储左右两个车道线的索引
+    left_lane_inds = []
+    right_lane_inds = []
+
+    # 根据滑动窗口的数量进行循环
+    for window in range(nwindows):
+        # 找出每个窗口的边界点
+        win_y_low = binary_warped.shape[0] - (window+1)*window_height # 上边缘
+        win_y_high = binary_warped.shape[0] - window*window_height    # 下边缘
+        win_xleft_low = leftx_current - margin                        # 左车道线左边缘
+        win_xleft_high = leftx_current + margin                       # 左车道线右边缘
+        win_xright_low = rightx_current - margin                      # 右车道线左边缘
+        win_xright_high = rightx_current + margin                     # 右车道线右边缘
+        
+        # 在可视化图像中画出当前的窗口
+        cv2.rectangle(out_img,(win_xleft_low,win_y_low),
+        (win_xleft_high,win_y_high),(0,255,0), 2) 
+        cv2.rectangle(out_img,(win_xright_low,win_y_low),
+        (win_xright_high,win_y_high),(0,255,0), 2) 
+        
+        # 找出当前窗口中非零点的x,y坐标集合
+        good_left_inds = ((nonzeroy >= win_y_low) & (nonzeroy < win_y_high) & 
+        (nonzerox >= win_xleft_low) &  (nonzerox < win_xleft_high)).nonzero()[0]
+        good_right_inds = ((nonzeroy >= win_y_low) & (nonzeroy < win_y_high) & 
+        (nonzerox >= win_xright_low) &  (nonzerox < win_xright_high)).nonzero()[0]
+
+        # 将这些点的索引添加至之前创建的数组中
+        left_lane_inds.append(good_left_inds)
+        right_lane_inds.append(good_right_inds)
+
+        # If you found > minpix pixels, recenter next window on their mean position
+        if len(good_left_inds) > minpix:
+            leftx_current = np.int(np.mean(nonzerox[good_left_inds]))
+        if len(good_right_inds) > minpix:        
+            rightx_current = np.int(np.mean(nonzerox[good_right_inds]))
+
+    # 连接数组
+    try:
+        left_lane_inds = np.concatenate(left_lane_inds)
+        right_lane_inds = np.concatenate(right_lane_inds)
+    except ValueError:
+        # 忽略异常点
+        pass
+
+    # 提前出左、有车道线的像素点位置
+    leftx = nonzerox[left_lane_inds]
+    lefty = nonzeroy[left_lane_inds] 
+    rightx = nonzerox[right_lane_inds]
+    righty = nonzeroy[right_lane_inds]
+
+    return leftx, lefty, rightx, righty, out_img
+
+
+def fit_polynomial(binary_warped):
+    # 找出车道线的坐标点
+    leftx, lefty, rightx, righty, out_img = find_lane_pixels(binary_warped)
+
+    # 对左右两个车道线进行多项式拟合
+    left_fit = np.polyfit(lefty, leftx, 2)
+    right_fit = np.polyfit(righty, rightx, 2)
+
+    # 生成一组x，y坐标点用于绘制曲线
+    ploty = np.linspace(0, binary_warped.shape[0]-1, binary_warped.shape[0])
+    try:
+        left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
+        right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
+    except TypeError:
+        # 异常捕获
+        print('The function failed to fit a line!')
+        left_fitx = 1*ploty**2 + 1*ploty
+        right_fitx = 1*ploty**2 + 1*ploty
+
+    # 车道线可视化
+    out_img[lefty, leftx] = [255, 0, 0]
+    out_img[righty, rightx] = [0, 0, 255]
+
+    plt.plot(left_fitx, ploty, color='yellow')
+    plt.plot(right_fitx, ploty, color='yellow')
+
+    return out_img
+
+
+out_img = fit_polynomial(binary_warped)
+
+plt.imshow(out_img)
+```
 
 
 ### 滑窗法2
