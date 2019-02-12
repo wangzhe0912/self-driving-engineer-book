@@ -36,7 +36,7 @@ class Line():
         self.current_fit = [np.array([False])]  
         # 曲率半径
         self.radius_of_curvature = None 
-        #distance in meters of vehicle center from the line
+        # 车辆偏移距离
         self.line_base_pos = None 
         #difference in fit coefficients between last and new fits
         self.diffs = np.array([0,0,0], dtype='float') 
