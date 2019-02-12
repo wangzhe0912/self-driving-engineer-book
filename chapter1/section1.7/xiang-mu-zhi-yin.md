@@ -24,11 +24,11 @@
 ```python
 class Line():
     def __init__(self):
-        # was the line detected in the last iteration?
+        # 在上次迭代中是否正常检测到车道线
         self.detected = False  
-        # x values of the last n fits of the line
+        # 最近几次检测中的x值
         self.recent_xfitted = [] 
-        #average x values of the fitted line over the last n iterations
+        # 最近几次检测中的x平均值
         self.bestx = None     
         #polynomial coefficients averaged over the last n iterations
         self.best_fit = None  
