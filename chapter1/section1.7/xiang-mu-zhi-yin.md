@@ -32,7 +32,7 @@ class Line():
         self.bestx = None     
         # 最近几次检测中多项式拟合的平均值
         self.best_fit = None  
-        #polynomial coefficients for the most recent fit
+        # 最近几次检测中多项式拟合的值
         self.current_fit = [np.array([False])]  
         #radius of curvature of the line in some units
         self.radius_of_curvature = None 
