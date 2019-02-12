@@ -85,7 +85,7 @@ pts_left = np.array([np.transpose(np.vstack([left_fitx, ploty]))])
 pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, ploty])))])
 pts = np.hstack((pts_left, pts_right))
 
-# Draw the lane onto the warped blank image
+# 在空白图像中绘制两条车道线
 cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
 
 # Warp the blank back to original image space using inverse perspective matrix (Minv)
