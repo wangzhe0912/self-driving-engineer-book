@@ -30,7 +30,7 @@ class Line():
         self.recent_xfitted = [] 
         # 最近几次检测中的x平均值
         self.bestx = None     
-        #polynomial coefficients averaged over the last n iterations
+        # 最近几次检测中多项式拟合的平均值
         self.best_fit = None  
         #polynomial coefficients for the most recent fit
         self.current_fit = [np.array([False])]  
