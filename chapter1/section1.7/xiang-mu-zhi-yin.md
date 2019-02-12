@@ -90,7 +90,7 @@ cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
 
 # Warp the blank back to original image space using inverse perspective matrix (Minv)
 newwarp = cv2.warpPerspective(color_warp, Minv, (image.shape[1], image.shape[0])) 
-# Combine the result with the original image
+# 将结果图像与原始图像相结合
 result = cv2.addWeighted(undist, 1, newwarp, 0.3, 0)
 plt.imshow(result)
 ```
