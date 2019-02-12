@@ -76,7 +76,7 @@ class Line():
 实现代码如下：
 
 ```python
-# Create an image to draw the lines on
+# 创建用于绘图的图像
 warp_zero = np.zeros_like(warped).astype(np.uint8)
 color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
 
