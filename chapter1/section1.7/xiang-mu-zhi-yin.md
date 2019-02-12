@@ -37,12 +37,12 @@ class Line():
         # 曲率半径
         self.radius_of_curvature = None 
         # 车辆偏移距离
-        self.line_base_pos = None 
-        #difference in fit coefficients between last and new fits
+        self.line_base_pos = None
+        # 两次拟合系数之间的差异
         self.diffs = np.array([0,0,0], dtype='float') 
-        #x values for detected line pixels
+        # 车道线的x坐标
         self.allx = None  
-        #y values for detected line pixels
+        # 车道线的y坐标
         self.ally = None  
 ```
 
