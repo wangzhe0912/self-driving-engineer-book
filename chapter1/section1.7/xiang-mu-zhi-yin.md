@@ -80,7 +80,7 @@ class Line():
 warp_zero = np.zeros_like(warped).astype(np.uint8)
 color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
 
-# Recast the x and y points into usable format for cv2.fillPoly()
+# 将x,y点转换为可用格式
 pts_left = np.array([np.transpose(np.vstack([left_fitx, ploty]))])
 pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, ploty])))])
 pts = np.hstack((pts_left, pts_right))
