@@ -88,7 +88,7 @@ pts = np.hstack((pts_left, pts_right))
 # 在空白图像中绘制两条车道线
 cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
 
-# Warp the blank back to original image space using inverse perspective matrix (Minv)
+# 使用逆转换矩阵Minv将其转换为原始图像
 newwarp = cv2.warpPerspective(color_warp, Minv, (image.shape[1], image.shape[0])) 
 # 将结果图像与原始图像相结合
 result = cv2.addWeighted(undist, 1, newwarp, 0.3, 0)
