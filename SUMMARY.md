@@ -43,7 +43,7 @@
   * [2.3 深层神经网络](chapter2/23-shen-ceng-shen-jing-wang-luo.md)
   * [2.4 卷积神经网络](chapter2/24-juan-ji-shen-jing-wang-luo.md)
   * [2.5 LeNet网络实战](chapter2/25-lenetwang-luo-shi-zhan.md)
-  * 2.6 交通信号标识识别
+  * [2.6 交通信号标识识别](chapter2/26-jiao-tong-xin-hao-biao-shi-shi-bie.md)
   * 2.7 Keras入门
   * 2.8 迁移学习
   * 2.9 行为克隆实战
