@@ -14,3 +14,6 @@
 技术支持[GitBook](https://github.com/GitbookIO/gitbook).
 
 
+个人网站：http://www.missshi.cn
+微信：WangZhe920912
+邮箱：wangzhe0912@tju.edu.cn
