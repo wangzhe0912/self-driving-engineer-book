@@ -46,7 +46,7 @@
   * [2.6 交通信号标识识别](chapter2/26-jiao-tong-xin-hao-biao-shi-shi-bie.md)
   * [2.7 Keras入门](chapter2/27-kerasru-men.md)
   * [2.8 迁移学习](chapter2/28-qian-yi-xue-xi.md)
-  * 2.9 行为克隆实战
+  * [2.9 行为克隆实战](chapter2/29-xing-wei-ke-long-shi-zhan.md)
 * [第3章 传感器融合](chapter3/README.md)
 * [第4章 定位技术](chapter4/README.md)
 * [第5章 路径规划](chapter5/README.md)
