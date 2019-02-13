@@ -39,6 +39,7 @@
     * [项目解决方案](chapter1/section1.7/xiang-mu-jie-jue-fang-an.md)
 * [第2章 神经网络](chapter2/README.md)
   * [2.1 神经网络基础](chapter2/21-shen-jing-wang-luo-ji-chu.md)
+  * [2.2 Tensorflow入门](chapter2/22-tensorflowru-men.md)
 * [第3章 传感器融合](chapter3/README.md)
 * [第4章 定位技术](chapter4/README.md)
 * [第5章 路径规划](chapter5/README.md)
