@@ -6,5 +6,5 @@
 
 ### Demo实现
 
-原始代码库：https://github.com/wangzhe0912/CarND-Advanced-Lane-Lines.git@demo
+原始代码库：https://github.com/wangzhe0912/CarND-Advanced-Lane-Lines/tree/demo
 
