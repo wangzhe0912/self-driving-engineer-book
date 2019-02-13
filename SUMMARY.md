@@ -40,7 +40,7 @@
 * [第2章 神经网络](chapter2/README.md)
   * [2.1 神经网络基础](chapter2/21-shen-jing-wang-luo-ji-chu.md)
   * [2.2 Tensorflow入门](chapter2/22-tensorflowru-men.md)
-  * 2.3 深层神经网络
+  * [2.3 深层神经网络](chapter2/23-shen-ceng-shen-jing-wang-luo.md)
   * 2.4 卷积神经网络
   * 2.5 LeNet网络实战
   * 2.6 交通信号标识识别
