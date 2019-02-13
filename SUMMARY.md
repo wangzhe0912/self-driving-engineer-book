@@ -41,8 +41,8 @@
   * [2.1 神经网络基础](chapter2/21-shen-jing-wang-luo-ji-chu.md)
   * [2.2 Tensorflow入门](chapter2/22-tensorflowru-men.md)
   * [2.3 深层神经网络](chapter2/23-shen-ceng-shen-jing-wang-luo.md)
-  * 2.4 卷积神经网络
-  * 2.5 LeNet网络实战
+  * [2.4 卷积神经网络](chapter2/24-juan-ji-shen-jing-wang-luo.md)
+  * [2.5 LeNet网络实战](chapter2/25-lenetwang-luo-shi-zhan.md)
   * 2.6 交通信号标识识别
   * 2.7 Keras入门
   * 2.8 迁移学习
