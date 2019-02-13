@@ -40,6 +40,13 @@
 * [第2章 神经网络](chapter2/README.md)
   * [2.1 神经网络基础](chapter2/21-shen-jing-wang-luo-ji-chu.md)
   * [2.2 Tensorflow入门](chapter2/22-tensorflowru-men.md)
+  * 2.3 深层神经网络
+  * 2.4 卷积神经网络
+  * 2.5 LeNet网络实战
+  * 2.6 交通信号标识识别
+  * 2.7 Keras入门
+  * 2.8 迁移学习
+  * 2.9 行为克隆实战
 * [第3章 传感器融合](chapter3/README.md)
 * [第4章 定位技术](chapter4/README.md)
 * [第5章 路径规划](chapter5/README.md)
