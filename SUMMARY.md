@@ -39,6 +39,11 @@
     * [项目解决方案](chapter1/section1.7/xiang-mu-jie-jue-fang-an.md)
 * [第2章 神经网络](chapter2/README.md)
   * [2.1 神经网络基础](chapter2/21-shen-jing-wang-luo-ji-chu.md)
+    * [机器学习基本概念](chapter2/21-shen-jing-wang-luo-ji-chu/ji-qi-xue-xi-ji-ben-gai-nian.md)
+    * 线性回归
+    * 感知器
+    * 误差函数
+    * 逻辑回归与梯度下降算法
   * [2.2 Tensorflow入门](chapter2/22-tensorflowru-men.md)
   * [2.3 深层神经网络](chapter2/23-shen-ceng-shen-jing-wang-luo.md)
   * [2.4 卷积神经网络](chapter2/24-juan-ji-shen-jing-wang-luo.md)
