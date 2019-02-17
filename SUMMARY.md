@@ -40,7 +40,6 @@
 * [第2章 神经网络](chapter2/README.md)
   * [2.1 神经网络基础](chapter2/21-shen-jing-wang-luo-ji-chu.md)
     * [机器学习基本概念](chapter2/21-shen-jing-wang-luo-ji-chu/ji-qi-xue-xi-ji-ben-gai-nian.md)
-    * 线性回归
     * 感知器
     * 误差函数
     * 逻辑回归与梯度下降算法
